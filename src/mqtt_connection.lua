@@ -6,10 +6,10 @@ function mqtt_connection(subscriptions)
     function mqtt_subscribe()
       for subs, _ in pairs(subscriptions) do
         path = MQTT_PATH .. "/" .. subs
-        m:subscribe(path ,0,
-            function(conn)
-                print("mqtt: subscribed " .. path)
-            end)
+        m:subscribe(path , 2,
+                    function(conn)
+                    end)
+        print("mqtt: subscribed " .. path)
        end
     end
     function connect()
@@ -49,12 +49,18 @@ function mqtt_connection(subscriptions)
 
     m:on("message", msg_callback or
     function(conn, topic, data)
-        print("mtqq: received " .. topic .. ":" .. data)
+        delivered = false
         for subs, cb in pairs(subscriptions) do
             path = MQTT_PATH .. "/" .. subs
             if topic == path then
                 cb(conn, topic, data)
+                delivered = true
             end
+        end
+
+        if not delivered then
+            print("mtqq: received with no subs: " ..
+                  topic .. ":" .. data)
         end
 
     end

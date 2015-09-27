@@ -1,14 +1,12 @@
 #!/usr/bin/env python
+import argparse
 import os
 import os.path
 import select
 import socket
 import sys
 
-
-TCP_ADDR = sys.argv[1]
 TCP_PORT = 2323
-FILENAME = sys.argv[2]
 TIMEOUT_SECS = 4
 
 
@@ -36,18 +34,16 @@ class TelnetConnector(object):
         if expect_response:
             res = self.recv(128)
             if res is None:
-                print "Retrying cmd..."
-                self.cmd(message)
+                raise Exception()
             if self._debug:
                 print "<-", res
             return res
 
 
 class Uploader(object):
-    def __init__(self, telnet_conn=None, coalesced_lines=5):
-        self._telnet = telnet_conn or TelnetConnector(addr=TCP_ADDR,
-                                                      port=TCP_PORT)
+    def __init__(self, telnet_conn, coalesced_lines=5):
         self._coalesced_lines = coalesced_lines
+        self._telnet = telnet_conn
 
     def _split_lines_(self, lines, n):
         for i in range(0, len(lines), n):
@@ -70,20 +66,24 @@ class Uploader(object):
                     y_lines = []
         yield y_lines
 
-    def upload_file(self, filename):
+    def upload_file(self, filename, as_filename=None, compile_file=True):
+        as_filename = as_filename or filename
         lines = open(filename, 'r').readlines()
-        basename = os.path.basename(filename)
+        basename = os.path.basename(as_filename)
         self._telnet.cmd("file.remove('%s');" % basename)
         self._telnet.cmd("file.open('%s','w+');" % basename)
         self._telnet.cmd("w = file.writeline")
 
         lines = map(lambda s: s.rstrip("\n").rstrip("\r"), lines)
         for chunk_of_lines in self._split_lines(lines, self._coalesced_lines):
-            cmd = 'w([[' + "\n".join(chunk_of_lines) + ']]);'
+            line = "\n".join(chunk_of_lines)
+            if line.endswith("]"):
+                line += " "
+            cmd = 'w([[' + line + ']]);'
             self._telnet.cmd(cmd)
 
-        self._telnet.cmd("file.close();")
-        if basename != 'init.lua':
+        # self._telnet.cmd("file.close();")
+        if basename != 'init.lua' and compile_file:
             self._telnet.cmd("node.compile('%s');" % basename)
             self._telnet.cmd("file.remove('%s');" % basename)
 
@@ -99,7 +99,41 @@ class Uploader(object):
             self.upload_file(path)
 
 if __name__ == '__main__':
-    telnet = TelnetConnector(addr=TCP_ADDR, port=TCP_PORT, debug=True)
+    parser = argparse.ArgumentParser(description='Upload LUA code to NodeMCU.')
+    parser.add_argument('addr')
+    parser.add_argument('port', default=TCP_PORT, type=int)
+    parser.add_argument('--reboot', dest='reboot', action='store_true')
+    parser.add_argument('--no-reboot', dest='reboot', action='store_false')
+    parser.set_defaults(reboot=False)
+    parser.add_argument('action',
+                        choices=['upload', 'run', 'check', 'restart'])
+    parser.add_argument('file', nargs='+',
+                        help='file or directory to be uploaded')
+    args = parser.parse_args(sys.argv[1:])
+
+    telnet = TelnetConnector(addr=args.addr, port=args.port, debug=True)
     upd = Uploader(telnet)
-    upd.upload(FILENAME)
-    telnet.cmd("node.restart();", expect_response=False)
+    telnet.cmd("=node.heap();")
+    telnet.cmd("=file.close();")
+
+    if args.action == 'restart':
+        telnet.cmd("node.restart();", expect_response=False)
+    elif args.action == 'upload':
+        for filename in args.file:
+            upd.upload(filename)
+        if args.reboot:
+            telnet.cmd("node.restart();", expect_response=False)
+    elif args.action == 'run':
+        for filename in args.file:
+            basename = "_" + os.path.basename(filename)
+            upd.upload_file(filename, as_filename=basename,
+                            compile_file=False)
+            telnet.cmd("dofile('%s');" % basename)
+            telnet.cmd("file.remove('%s');" % basename)
+    elif args.action == 'check':
+        for filename in args.file:
+            basename = "_" + os.path.basename(filename)
+            upd.upload_file(filename, as_filename=basename,
+                            compile_file=True)
+            telnet.cmd("file.remove('%s');" % basename.replace(".lua",".lc"))
+
