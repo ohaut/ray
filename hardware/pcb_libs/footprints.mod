@@ -1,0 +1,8083 @@
+PCBNEW-LibModule-V1  Wed 10 Apr 2013 08:45:22 AM WEST
+# encoding utf-8
+Units mm
+$INDEX
+ABS07-XTAL
+CONN_SMD
+CONN_USB_MINI_B_H_SMD
+DO-214A
+DO-214AC
+FDS6298
+HC-49-S
+LNX-BAT-HLD-001
+L_1919
+MHOLE_3MM
+MSOP-8
+PICOBLADE4
+PICOBLADE8
+SMD Capacitor Case F
+SMD_Capacitor_Case_F
+SO28
+SOD-123F
+SOIC-20
+SOT-143-B
+TC2030-MCP-NL
+WE-HCC-1210
+NBEE_LOGO
+NBEE_SHORT_LOGO
+$EndINDEX
+$MODULE NBEE_SHORT_LOGO
+Po 0 0 0 15 5161C18B 00000000 ~~
+Li NBEE_SHORT_LOGO
+Sc 0
+AR /515301BD
+Op 0 0 0
+At VIRTUAL
+T0 0 0 1.524 1.524 0 0.3048 N I 21 N "Z105"
+T1 0 1.524 1.524 1.524 0 0.3048 N V 21 N "NBEE_SHORT_LOGO"
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.15112 -4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 -4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 -4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 -3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 -3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 -3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 -3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -3.10388
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 -3.10388
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 -2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 -2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.10388 -2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 -2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 -2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 -2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.84912 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -8.98144 -2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.39648 -2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 -2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.97204 -2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.2644 -2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.97204 -1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 -1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.10388 -1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 -1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 -1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.2362 -1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.00024 -1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 -1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.2362 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.36828 -1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 -1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.36828 -1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 -1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.50036 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.604 -0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.63244 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.15112 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 -0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.01904 -0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.2738 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.63244 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.50036 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.50036 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.82092 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.36828 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.82092 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.05664 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.84912 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.41528 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.35864 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.37744 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.38684 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.3302 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.51892 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.36804 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.2362 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.54736 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.22656 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.57556 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.19812 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.71704 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.16992 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.68884 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.81152 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.16052 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.18872 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.13208 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.84912 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.10388 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.75488 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.84912 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.03784 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.97204 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.9812 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.9812 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.83996 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.06604 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.9812 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.01904 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -8.5852 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.92456 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.92456 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.92456 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.13208 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.06604 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.12268 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.06604 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.91516 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.03784 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.18872 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.13208 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.84912 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.10388 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.82092 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.57556 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.19812 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.78308 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.23596 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.75488 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.50952 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.38684 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.3302 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.36804 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.3208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.05664 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.3208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.6604 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 3.10388
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.2738 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.6134 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.82092 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.98 -2.05
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.17 -2.71
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.29 -2.98
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.56 -3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.7 -3.64
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -8 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.87 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.74 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.6 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.95 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.69 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.56 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.43 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.29 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.16 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.03 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.35 3.11
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.14 1.79
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7 2.05
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.74 2.45
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.57 2.97
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.43 2.7
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.77 -0.33
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.57 -0.86
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.6 -3.63
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.47 -3.9
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.91 1.26
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.31 0.59
+$EndPAD
+$EndMODULE NBEE_SHORT_LOGO
+$MODULE NBEE_LOGO
+Po 0 0 0 15 51537635 00000000 ~~
+Li NBEE_LOGO
+Sc 0
+AR /515301BD
+Op 0 0 0
+At VIRTUAL
+T0 0 0 1.524 1.524 0 0.3048 N I 21 N "Z105"
+T1 0 1.524 1.524 1.524 0 0.3048 N V 21 N "NBEE_LOGO"
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.15112 -4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 -4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 -4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 -3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 -3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 -3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 -3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -3.10388
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 -3.10388
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 -2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 -2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.10388 -2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 -2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 -2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 -2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.84912 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -8.98144 -2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.39648 -2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 -2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.97204 -2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.2644 -2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.97204 -1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 -1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.10388 -1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 -1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 -1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 -1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.2362 -1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.00024 -1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 -1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.2362 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 -1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.36828 -1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 -1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 -1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.36828 -1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 -1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.50036 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 -0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.604 -0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.63244 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.15112 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 -0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.01904 -0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.2738 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.76452 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 -0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.63244 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.06604
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.50036 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.19812
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.50036 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.82092 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 0.3302
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.36828 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.82092 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.05664 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.84912 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 0.46228
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.41528 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.35864 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.37744 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.38684 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.3302 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.51892 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.36804 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 0.59436
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.2362 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.54736 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.22656 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.57556 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.19812 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.71704 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.16992 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.68884 0.72644
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.81152 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.16052 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.18872 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.13208 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.84912 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.10388 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.75488 0.85852
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.10412 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.84912 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.03784 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 0.9906
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.97204 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.9812 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 1.12268
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.9812 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 1.25476
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.83996 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.33044 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.06604 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.9812 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.01904 1.38684
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -8.5852 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.92456 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 1.51892
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.19836 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.92456 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.92456 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 2.37744 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 1.651
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.13208 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.78308
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.06628 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.9906 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.06604 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 1.91516
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.90576 2.04724
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.9342 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.05664 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 2.17932
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.80212 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.12268 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.06604 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.91516 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.03784 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.88696 2.3114
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.83972 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.18872 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.13208 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.84912 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.10388 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.82092 2.44348
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.67004 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.36804 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.57556 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.19812 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.78308 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.23596 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.75488 2.57556
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.9436 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.50952 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.38684 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.3302 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.36804 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 2.70764
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.53796 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.87756 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.09448 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.50012 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.3208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.05664 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.3208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 2.83972
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.40588 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.6604 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.9624 2.9718
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.6322 3.10388
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.2738 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.76428 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 3.23596
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 1.18872 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -5.6134 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.82092 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.89636 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 3.36804
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.9718 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.91516 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.38684 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.46228 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.46228 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.38684 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.3114 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.302 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.16052 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.6134 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.33044 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.78332 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.70788 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.2362 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.09472 3.50012
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.10388 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.70764 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.24536 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.71704 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.79248 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.3302 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.19812 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.59436 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.12268 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.58496 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.04724 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.10388 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.50012 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.02844 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.49072 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.34924 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.87756 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.2738 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.80212 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.06628 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.5946 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.51916 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.9154 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.44372 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.906 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.36828 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.8966 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.29284 3.6322
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.57556 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.3114 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.78308 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.19812 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.06604 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.72644 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.04724 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.6322 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.34924 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.2738 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.06628 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.38708 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.04748 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.44372 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.97204 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.50036 3.76428
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.79248 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.3114 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.78308 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.19812 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.79248 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.39624 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.9906 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.04724 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.79248 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.302 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.54736 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.2738 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.67004 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.39624 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.33044 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.79248 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.71728 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.44372 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.97204 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.50036 3.89636
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.3114 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.78308 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.19812 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.06604 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.04724 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.89636 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.87756 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.40588 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.67004 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.5946 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.38708 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.44372 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.97204 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.50036 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.29284 4.02844
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.23596 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.3114 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.78308 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.85852 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.19812 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.19812 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.72644 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.12268 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.651 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.04724 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.57556 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.9718 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.6322 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.55676 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.34924 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.87756 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.47192 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.06628 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.5946 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.99084 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.51916 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.04748 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.44372 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.97204 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.50036 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.76452 4.16052
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.90576 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.3114 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.78308 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.25476 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.6604 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -0.59436 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.39624 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.45288 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.37744 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.302 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.6604 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.2926 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.53796 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.39648 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.26416 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.05688 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.52832 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.71728 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.44372 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.97204 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.50036 4.2926
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.53796 4.42468
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.40588 4.55676
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.2738 4.68884
+.LocalClearance 0.0254
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.98 -2.05
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.17 -2.71
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.29 -2.98
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.56 -3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.7 -3.64
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -8 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.87 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.74 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.6 -2.18
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.95 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.69 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 0.32 3.52
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.06 4.03
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.03 3.76
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 1.25 3.53
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.18 3.53
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 2.44 3.57
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 3.93 4.16
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 4.29 3.54
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.05 3.54
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -1.52 3.53
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -2.84 3.52
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.48 3.54
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.75 3.54
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.74 3.91
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 6.74 3.76
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.46 3.52
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.19 3.52
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.65 3.53
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 9.58 3.52
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.1 3.51
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.9 3.77
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.01 3.89
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.12 3.89
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.2 3.9
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.29 4.16
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 10.89 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.02 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 11.15 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.45 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.57 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.68 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 5.75 4.29
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 7.86 3.56
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.11 3.56
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po 8.24 3.56
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.56 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.43 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.29 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.16 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -4.03 3.37
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.35 3.11
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7.14 1.79
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -7 2.05
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.74 2.45
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.57 2.97
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -3.43 2.7
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.77 -0.33
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.57 -0.86
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.6 -3.63
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -6.47 -3.9
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -9.91 1.26
+$EndPAD
+$PAD
+Sh "" R 0.13208 0.13208 0 0 0
+Dr 0 0 0
+At STD N 00200000
+Ne 0 ""
+Po -10.31 0.59
+$EndPAD
+$EndMODULE NBEE_LOGO
+$MODULE ABS07-XTAL
+Po 0 0 0 15 4FBF5A84 00000000 ~~
+Li ABS07-XTAL
+Sc 0
+AR 
+Op 0 0 0
+T0 0.20066 -1.80086 0.889 0.889 0 0.1524 N V 21 N "ABS07-XTAL"
+T1 0 1.80086 0.889 0.889 0 0.1524 N V 21 N "Val**"
+DS 0 -0.19812 0 0.20066 0.254 21
+DS 0.29972 -0.29718 0.29972 0.40132 0.254 21
+DS -0.29972 0.40132 -0.29972 -0.29718 0.254 21
+DS 0.39878 0.00254 0.6985 0.00254 0.14986 21
+DS -0.70104 0.00254 -0.40132 0.00254 0.14986 21
+DS 0.29972 0.00254 0.59944 0.00254 0.14986 21
+DS -0.59944 0.00254 -0.29972 0.00254 0.14986 21
+DS -0.6985 -0.89916 0.70104 -0.89916 0.254 21
+DS -0.6985 0.9017 0.70104 0.9017 0.254 21
+$PAD
+Sh "1" R 1.09982 1.89992 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.30048 0.00254
+$EndPAD
+$PAD
+Sh "2" R 1.09982 1.89992 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.30048 0.00254
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.3 0.3 0.3
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE ABS07-XTAL
+$MODULE CONN_SMD
+Po 0 0 0 15 51530356 00000000 ~~
+Li CONN_SMD
+Cd Terminal block 2 pins, Phoenix MSTBVA 2,5/2-G-5,08
+Kw DEV
+Sc 0
+AR /514F50FF
+Op 0 0 0
+T0 0 0 0.762 0.762 0 0.1524 N V 21 N "J101"
+T1 0 0 0.762 0.762 0 0.1524 N V 21 N "CONN_SMD"
+DS -7.1 0 4.4 0 0.15 21
+DS -7.1 4.2 4.4 4.2 0.15 21
+DS 4.4 4.2 4.4 -4.2 0.15 21
+DS 4.4 -4.2 -7.1 -4.2 0.15 21
+DS -7.1 -4.2 -7.1 4.2 0.15 21
+$PAD
+Sh "3" R 2.6 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5.7 -2
+$EndPAD
+$PAD
+Sh "4" R 2.6 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5.7 2
+$EndPAD
+$PAD
+Sh "1" R 3 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.5 -2
+$EndPAD
+$PAD
+Sh "2" R 3 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.5 2
+$EndPAD
+$EndMODULE CONN_SMD
+$MODULE CONN_USB_MINI_B_H_SMD
+Po 0 0 0 15 5165188E 00000000 ~~
+Li CONN_USB_MINI_B_H_SMD
+Cd USB SERIES MINI-B SURFACE MOUNTED
+Kw USB SERIES MINI-B SURFACE MOUNTED
+Sc 0
+AR /515885C1
+Op 0 0 0
+At SMD
+T0 0 0 0.79756 0.79756 1800 0.19939 N V 21 N "J1"
+T1 0 0 0.79756 0.79756 0 0.19939 N V 21 N "CONN_USB_MINI_B_H_SMD"
+DS 0.7 1.6 0.9 1.6 0.254 21
+DS 0.7 0.8 0.9 0.8 0.254 21
+DS 0.7 0 0.9 0 0.254 21
+DS 0.7 -0.8 0.9 -0.8 0.254 21
+DS 0.7 -1.6 0.9 -1.6 0.254 21
+DS 0.7 3.9 0.7 5.2 0.254 21
+DS 0.7 5.2 -1.1 5.2 0.254 21
+DS -1.1 5.2 -1.1 3.9 0.254 21
+DS -1.1 -3.9 -1.1 -5.2 0.254 21
+DS -1.1 -5.2 0.7 -5.2 0.254 21
+DS 0.7 -5.2 0.7 -3.9 0.254 21
+DS -6.6 3.9 -6.6 5.2 0.254 21
+DS -6.6 5.2 -4.6 5.2 0.254 21
+DS -4.6 5.2 -4.6 3.9 0.254 21
+DS -6.6 -3.9 -6.6 -5.2 0.254 21
+DS -6.6 -5.2 -4.6 -5.2 0.254 21
+DS -4.6 -5.2 -4.6 -3.9 0.254 21
+DS 0.7 -3.9 0.7 3.9 0.254 21
+DS 0.7 3.9 -8.6 3.9 0.254 21
+DS -8.6 3.9 -8.6 -3.9 0.254 21
+DS -8.6 -3.9 0.7 -3.9 0.254 21
+$PAD
+Sh "3" R 2.25 0.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 2.25 0.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "N-0000037"
+Po 0 -0.8
+$EndPAD
+$PAD
+Sh "5" R 2.25 0.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "N-0000042"
+Po 0 1.6
+$EndPAD
+$PAD
+Sh "4" R 2.25 0.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0.8
+$EndPAD
+$PAD
+Sh "1" R 2.25 0.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "N-0000039"
+Po 0 -1.6
+$EndPAD
+$PAD
+Sh "6" R 2.5 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "N-0000042"
+Po -5.575 4.45
+$EndPAD
+$PAD
+Sh "7" R 2.5 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "N-0000042"
+Po -5.575 -4.45
+$EndPAD
+$PAD
+Sh "S1" R 2.5 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.125 4.45
+$EndPAD
+$PAD
+Sh "S2" R 2.5 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.125 -4.45
+$EndPAD
+$EndMODULE CONN_USB_MINI_B_H_SMD
+$MODULE DO-214A
+Po 0 0 0 15 4FB237B0 00000000 ~~
+Li DO-214A
+Sc 0
+AR 
+Op 0 0 0
+T0 0.39878 -4.24942 1.524 1.524 0 0.3048 N V 21 N "DO-214A"
+T1 0.0508 4.50088 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DC 4.30022 2.84988 4.35102 2.94894 0.381 21
+DS 2.19964 -2.90068 2.19964 2.79908 0.381 21
+DS 3.59918 2.9972 3.59918 -3.00228 0.381 21
+DS -3.50012 2.99974 3.59918 2.99974 0.381 21
+DS -3.49758 2.99974 -3.49758 -2.99974 0.381 21
+DS -3.50012 -2.99974 3.59918 -2.99974 0.381 21
+$PAD
+Sh "2" R 1.99898 3.49758 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.59918 0
+$EndPAD
+$PAD
+Sh "1" R 1.99898 3.49758 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.59918 0
+$EndPAD
+$EndMODULE DO-214A
+$MODULE DO-214AC
+Po 0 0 0 15 4FC0AE19 00000000 ~~
+Li DO-214AC
+Sc 0
+AR 
+Op 0 0 0
+T0 0.59944 -2.70002 1.524 1.524 0 0.3048 N I 21 N "DO-214AC"
+T1 1.30048 2.19964 0.79756 0.79756 0 0.11938 N V 21 N "VAL**"
+DS -0.39878 0 -0.8001 0 0.254 21
+DS 0.70104 0.00254 -0.20066 -0.79756 0.254 21
+DS -0.20066 -0.8001 -0.20066 0.8001 0.254 21
+DS -0.20066 0.80264 0.59944 0.1016 0.254 21
+DS 0.59944 0 1.00076 0 0.254 21
+DS -2.2479 1.40208 2.2479 1.40208 0.381 21
+DC 2.80162 1.45034 2.85242 1.5494 0.381 21
+DS 0.6985 -1.39954 0.6985 1.39954 0.381 21
+DS -2.2479 -1.39954 2.2479 -1.39954 0.381 21
+$PAD
+Sh "2" R 1.51638 1.79578 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.8796 0
+$EndPAD
+$PAD
+Sh "1" R 1.51638 1.79578 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.8796 0
+$EndPAD
+$EndMODULE DO-214AC
+$MODULE FDS6298
+Po 0 0 0 15 4FB27DD1 00000000 ~~
+Li FDS6298
+Cd module CMS SOJ 8 pins etroit
+Kw CMS SOJ
+Sc 0
+AR 
+Op 0 0 0
+At SMD
+T0 0 -0.889 1.143 1.143 0 0.1524 N I 21 N "FDS6298"
+T1 -0.59944 1.30048 0.889 0.889 0 0.1524 N V 21 N "VAL**"
+DS -2.667 1.778 -2.667 1.905 0.127 21
+DS -2.667 1.905 2.667 1.905 0.127 21
+DS 2.667 -1.905 -2.667 -1.905 0.127 21
+DS -2.667 -1.905 -2.667 1.778 0.127 21
+DS -2.667 -0.508 -2.159 -0.508 0.127 21
+DS -2.159 -0.508 -2.159 0.508 0.127 21
+DS -2.159 0.508 -2.667 0.508 0.127 21
+DS 2.667 -1.905 2.667 1.905 0.127 21
+$PAD
+Sh "D" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.905 -2.667
+$EndPAD
+$PAD
+Sh "S" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.905 2.667
+$EndPAD
+$PAD
+Sh "D" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.635 -2.667
+$EndPAD
+$PAD
+Sh "D" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.635 -2.667
+$EndPAD
+$PAD
+Sh "D" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.905 -2.667
+$EndPAD
+$PAD
+Sh "S" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.635 2.667
+$EndPAD
+$PAD
+Sh "S" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.635 2.667
+$EndPAD
+$PAD
+Sh "G" R 0.508 1.143 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.905 2.667
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so8.wrl"
+Sc 0.5 0.32 0.5
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE FDS6298
+$MODULE HC-49-S
+Po 0 0 0 15 4DEAC9EF 00000000 ~~
+Li HC-49-S
+Sc 0
+AR /4DB0818C/4DC83522
+Op 0 0 0
+T0 0 0 0.635 0.635 0 0.127 N V 21 N "NAME*"
+T1 0 0 0.381 0.381 0 0.0508 N V 21 N "VAL*"
+DA -6.86054 2.02946 -7.36854 2.02946 -900 0.1524 21
+DA 6.60146 2.02946 6.60146 2.53746 -900 0.1524 21
+DS 7.10946 2.02946 7.10946 1.31826 0.1524 21
+DS -7.36854 2.02946 -7.36854 1.31826 0.1524 21
+DS -6.86054 2.53746 6.60146 2.53746 0.1524 21
+DS 6.604 -2.54 -6.858 -2.54 0.1524 21
+DS 7.112 -2.032 7.112 -1.3208 0.1524 21
+DS -7.366 -2.032 -7.366 -1.3208 0.1524 21
+DA -6.858 -2.032 -6.858 -2.54 -900 0.1524 21
+DA 6.604 -2.032 7.112 -2.032 -900 0.1524 21
+$PAD
+Sh "1" R 5.588 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "N-000138"
+Po -4.826 0
+$EndPAD
+$PAD
+Sh "2" R 5.588 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "N-000151"
+Po 4.572 0
+$EndPAD
+$EndMODULE HC-49-S
+$MODULE LNX-BAT-HLD-001
+Po 0 0 0 15 4FBD2A05 00000000 ~~
+Li LNX-BAT-HLD-001
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.50038 -11.0998 1.524 1.524 0 0.3048 N I 21 N "LNX-BAT-HLD-001"
+T1 11.99896 -4.89966 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+$PAD
+Sh "1" R 2.49936 5.09778 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -12.7 0
+$EndPAD
+$PAD
+Sh "2" C 17.79778 17.79778 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 0 0
+.SolderPaste -19.99996
+$EndPAD
+$PAD
+Sh "1" R 2.49936 5.09778 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 12.7 0
+$EndPAD
+$EndMODULE LNX-BAT-HLD-001
+$MODULE L_1919
+Po 0 0 0 15 512AA204 00000000 ~~
+Li L_1919
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1.016 1.016 0 0.1524 N V 21 N "L_1919"
+T1 0 0 1.016 1.016 0 0.1524 N V 21 N "VAL**"
+DS -2.4 -2.4 2.4 -2.4 0.1524 21
+DS 2.4 -2.4 2.4 2.4 0.1524 21
+DS 2.4 2.4 -2.4 2.4 0.1524 21
+DS -2.4 2.4 -2.4 -2.4 0.1524 21
+$PAD
+Sh "1" R 5.3 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.75
+$EndPAD
+$PAD
+Sh "2" R 5.3 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 1.75
+$EndPAD
+$EndMODULE L_1919
+$MODULE MHOLE_3MM
+Po 0 0 0 15 4FBDE8AE 00000000 ~~
+Li MHOLE_3MM
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.20066 -5.90042 1.524 1.524 0 0.3048 N I 21 N "MHOLE"
+T1 0.39878 -3.79984 1.524 1.524 0 0.3048 N I 21 N "VAL**"
+DC 0 0 1.59258 1.4986 1.19888 21
+$PAD
+Sh "1" C 2.99974 2.99974 0 0 0
+Dr 2.99974 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$EndMODULE MHOLE_3MM
+$MODULE MSOP-8
+Po 0 0 0 15 00200000 00000000 ~~
+Li MSOP-8
+Cd 8-LEAD MSOP
+Kw 8-LEAD MSOP
+Sc 0
+AR 
+Op 0 0 0
+At SMD
+T0 1.28778 -0.70612 1.016 1.016 0 0.0889 N V 20 N "NAME*"
+T1 2.1971 0.54102 1.016 1.016 0 0.0889 N V 20 N "VAL*"
+DS -1.12268 2.44856 -0.82296 2.44856 0.06604 21
+DS -0.82296 2.44856 -0.82296 1.5494 0.06604 21
+DS -1.12268 1.5494 -0.82296 1.5494 0.06604 21
+DS -1.12268 2.44856 -1.12268 1.5494 0.06604 21
+DS -0.47498 2.44856 -0.17272 2.44856 0.06604 21
+DS -0.17272 2.44856 -0.17272 1.5494 0.06604 21
+DS -0.47498 1.5494 -0.17272 1.5494 0.06604 21
+DS -0.47498 2.44856 -0.47498 1.5494 0.06604 21
+DS 0.17272 2.44856 0.47498 2.44856 0.06604 21
+DS 0.47498 2.44856 0.47498 1.5494 0.06604 21
+DS 0.17272 1.5494 0.47498 1.5494 0.06604 21
+DS 0.17272 2.44856 0.17272 1.5494 0.06604 21
+DS 0.82296 2.44856 1.12268 2.44856 0.06604 21
+DS 1.12268 2.44856 1.12268 1.5494 0.06604 21
+DS 0.82296 1.5494 1.12268 1.5494 0.06604 21
+DS 0.82296 2.44856 0.82296 1.5494 0.06604 21
+DS 0.82296 -1.5494 1.12268 -1.5494 0.06604 21
+DS 1.12268 -1.5494 1.12268 -2.44856 0.06604 21
+DS 0.82296 -2.44856 1.12268 -2.44856 0.06604 21
+DS 0.82296 -1.5494 0.82296 -2.44856 0.06604 21
+DS 0.17272 -1.5494 0.47498 -1.5494 0.06604 21
+DS 0.47498 -1.5494 0.47498 -2.44856 0.06604 21
+DS 0.17272 -2.44856 0.47498 -2.44856 0.06604 21
+DS 0.17272 -1.5494 0.17272 -2.44856 0.06604 21
+DS -0.47498 -1.5494 -0.17272 -1.5494 0.06604 21
+DS -0.17272 -1.5494 -0.17272 -2.44856 0.06604 21
+DS -0.47498 -2.44856 -0.17272 -2.44856 0.06604 21
+DS -0.47498 -1.5494 -0.47498 -2.44856 0.06604 21
+DS -1.12268 -1.5494 -0.82296 -1.5494 0.06604 21
+DS -0.82296 -1.5494 -0.82296 -2.44856 0.06604 21
+DS -1.12268 -2.44856 -0.82296 -2.44856 0.06604 21
+DS -1.12268 -1.5494 -1.12268 -2.44856 0.06604 21
+DS -1.4986 1.4986 1.4986 1.4986 0.19812 21
+DS 1.4986 1.4986 1.4986 -1.4986 0.19812 21
+DS 1.4986 -1.4986 -1.4986 -1.4986 0.19812 21
+DS -1.4986 -1.4986 -1.4986 1.4986 0.19812 21
+DC -1.14808 1.14808 -1.24714 1.24714 0 21
+$PAD
+Sh "1" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.97282 2.04978
+$EndPAD
+$PAD
+Sh "2" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.32258 2.04978
+$EndPAD
+$PAD
+Sh "3" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.32258 2.04978
+$EndPAD
+$PAD
+Sh "4" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.97282 2.04978
+$EndPAD
+$PAD
+Sh "5" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.97282 -2.04978
+$EndPAD
+$PAD
+Sh "6" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.32258 -2.04978
+$EndPAD
+$PAD
+Sh "7" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.32258 -2.04978
+$EndPAD
+$PAD
+Sh "8" R 0.39878 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.97282 -2.04978
+$EndPAD
+$EndMODULE MSOP-8
+$MODULE PICOBLADE4
+Po 0 0 0 15 4FBD2DE1 00000000 ~~
+Li PICOBLADE4
+Sc 0
+AR 
+Op 0 0 0
+T0 2.10058 2.19964 0.79756 0.79756 0 0.11938 N V 21 N "PBLADE4"
+T1 -1.89992 -4.09956 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS -1.19888 3.69824 4.8006 3.69824 0.254 21
+DS 5.35178 0.6985 5.35178 0.12446 0.254 21
+DS 5.35178 0.12446 4.55168 0.12446 0.254 21
+DS 5.32638 0.6985 6.92658 0.6985 0.254 21
+DS -0.7747 0.12446 -1.5748 0.12446 0.254 21
+DS -1.5748 0.12446 -1.5748 0.7239 0.254 21
+DS -1.5748 0.7239 -2.99974 0.7239 0.254 21
+$PAD
+Sh "MH2" R 2.0955 2.9972 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6.32206 2.74574
+$EndPAD
+$PAD
+Sh "MH1" R 2.0955 2.9972 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.67462 2.74828
+$EndPAD
+$PAD
+Sh "1" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.00254 -0.00254
+$EndPAD
+$PAD
+Sh "2" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.24968 0
+$EndPAD
+$PAD
+Sh "4" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.74904 0
+$EndPAD
+$PAD
+Sh "3" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.49936 0
+$EndPAD
+$SHAPE3D
+Na "53398-0471.wrl"
+Sc 0.4 0.4 0.4
+Of 0.071 -0.084 0.097
+Ro 0 0 180
+$EndSHAPE3D
+$EndMODULE PICOBLADE4
+$MODULE PICOBLADE8
+Po 0 0 0 15 4FBD2D76 00000000 ~~
+Li PICOBLADE8
+Sc 0
+AR 
+Op 0 0 0
+T0 4.30022 2.70002 1.22174 1.22174 0 0.2032 N V 21 N "PICOBLADE8"
+T1 -2.70002 -1.09982 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS -1.10236 3.80238 9.89584 3.80238 0.254 21
+DS 10.34796 0.70104 10.34796 0.127 0.254 21
+DS 10.34796 0.127 9.54786 0.127 0.254 21
+DS 10.32256 0.70104 11.92276 0.70104 0.254 21
+DS -0.67564 0.127 -1.47574 0.127 0.254 21
+DS -1.47574 0.127 -1.47574 0.72644 0.254 21
+DS -1.47574 0.72644 -2.90068 0.72644 0.254 21
+$PAD
+Sh "MH2" R 2.0955 2.9972 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 11.31824 2.74828
+$EndPAD
+$PAD
+Sh "MH1" R 2.0955 2.9972 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.57556 2.75082
+$EndPAD
+$PAD
+Sh "8" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 8.74776 0
+$EndPAD
+$PAD
+Sh "7" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 7.49808 0
+$EndPAD
+$PAD
+Sh "6" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6.2484 0
+$EndPAD
+$PAD
+Sh "5" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.99872 0
+$EndPAD
+$PAD
+Sh "1" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.24968 0
+$EndPAD
+$PAD
+Sh "4" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.74904 0
+$EndPAD
+$PAD
+Sh "3" R 0.79756 1.2954 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.49936 0
+$EndPAD
+$SHAPE3D
+Na "53398-0871.wrl"
+Sc 0.4 0.4 0.4
+Of 0.171 -0.084 0.097
+Ro 0 0 180
+$EndSHAPE3D
+$EndMODULE PICOBLADE8
+$MODULE SMD Capacitor Case F
+Po 0 0 0 15 4FB2317C 00000000 ~~
+Li SMD Capacitor Case F
+Sc 0
+AR 
+Op 0 0 0
+T0 4.20116 -6.79958 1.524 1.524 0 0.3048 N I 21 N "SMD Capacitor Case F"
+T1 -1.6002 5.4991 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS -3.29946 4.20116 -4.20116 3.29946 0.381 21
+DS -4.20116 -3.2004 -3.29946 -4.09956 0.381 21
+DS 4.09956 -4.09956 4.09956 4.19862 0.381 21
+DS -3.29946 -4.1021 4.09956 -4.1021 0.381 21
+DS -4.20116 -3.2004 -4.20116 3.29438 0.381 21
+DS -3.302 4.19608 4.09956 4.19608 0.381 21
+DC 0 0 4.0005 -0.0508 0.381 21
+$PAD
+Sh "2" R 3.39598 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.39598 0
+$EndPAD
+$PAD
+Sh "1" R 3.39598 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.2512 0
+$EndPAD
+$EndMODULE SMD Capacitor Case F
+$MODULE SMD_Capacitor_Case_F
+Po 0 0 0 15 4FB2317C 00000000 ~~
+Li SMD_Capacitor_Case_F
+Sc 0
+AR 
+Op 0 0 0
+T0 4.20116 -6.79958 1.524 1.524 0 0.3048 N I 21 N "SMD Capacitor Case F"
+T1 -1.6002 5.4991 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS -3.29946 4.20116 -4.20116 3.29946 0.381 21
+DS -4.20116 -3.2004 -3.29946 -4.09956 0.381 21
+DS 4.09956 -4.09956 4.09956 4.19862 0.381 21
+DS -3.29946 -4.1021 4.09956 -4.1021 0.381 21
+DS -4.20116 -3.2004 -4.20116 3.29438 0.381 21
+DS -3.302 4.19608 4.09956 4.19608 0.381 21
+DC 0 0 4.0005 -0.0508 0.381 21
+$PAD
+Sh "2" R 3.39598 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.39598 0
+$EndPAD
+$PAD
+Sh "1" R 3.39598 1.19888 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.2512 0
+$EndPAD
+$EndMODULE SMD_Capacitor_Case_F
+$MODULE SO28
+Po 0 0 0 15 428070DF 00000000 ~~
+Li SO28
+Cd Module CMS SO 28 pins large
+Kw CMS SOJ SO SOIC
+Sc 0
+AR 
+Op 0 0 0
+At SMD
+T0 0 -1.26492 1.524 1.524 0 0.1524 N V 21 N "SO28"
+T1 0 1.27 1.524 1.524 0 0.1524 N V 21 N "Val*****"
+DS 8.89 -2.54 8.89 3.81 0.3048 21
+DS 8.89 3.81 -8.89 3.81 0.3048 21
+DS -8.89 3.81 -8.89 -3.81 0.3048 21
+DS -8.89 -3.81 8.89 -3.81 0.3048 21
+DS 8.89 -3.81 8.89 -2.54 0.3048 21
+DS -8.89 -0.635 -7.62 -0.635 0.3048 21
+DS -7.62 -0.635 -7.62 0.635 0.3048 21
+DS -7.62 0.635 -8.89 0.635 0.3048 21
+$PAD
+Sh "1" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -8.255 4.572
+$EndPAD
+$PAD
+Sh "2" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -6.985 4.572
+$EndPAD
+$PAD
+Sh "3" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5.715 4.572
+$EndPAD
+$PAD
+Sh "4" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.445 4.572
+$EndPAD
+$PAD
+Sh "5" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.175 4.572
+$EndPAD
+$PAD
+Sh "6" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.905 4.572
+$EndPAD
+$PAD
+Sh "7" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.635 4.572
+$EndPAD
+$PAD
+Sh "8" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.635 4.572
+$EndPAD
+$PAD
+Sh "9" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.905 4.572
+$EndPAD
+$PAD
+Sh "10" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.175 4.572
+$EndPAD
+$PAD
+Sh "11" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.445 4.572
+$EndPAD
+$PAD
+Sh "12" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.715 4.572
+$EndPAD
+$PAD
+Sh "13" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6.985 4.572
+$EndPAD
+$PAD
+Sh "14" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 8.255 4.572
+$EndPAD
+$PAD
+Sh "15" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 8.255 -4.572
+$EndPAD
+$PAD
+Sh "16" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6.985 -4.572
+$EndPAD
+$PAD
+Sh "17" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.715 -4.572
+$EndPAD
+$PAD
+Sh "18" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.445 -4.572
+$EndPAD
+$PAD
+Sh "19" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.175 -4.572
+$EndPAD
+$PAD
+Sh "20" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.905 -4.572
+$EndPAD
+$PAD
+Sh "21" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.635 -4.572
+$EndPAD
+$PAD
+Sh "22" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.635 -4.572
+$EndPAD
+$PAD
+Sh "23" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.905 -4.572
+$EndPAD
+$PAD
+Sh "24" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.175 -4.572
+$EndPAD
+$PAD
+Sh "25" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.445 -4.572
+$EndPAD
+$PAD
+Sh "26" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5.715 -4.572
+$EndPAD
+$PAD
+Sh "27" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -6.985 -4.572
+$EndPAD
+$PAD
+Sh "28" R 0.508 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -8.255 -4.572
+$EndPAD
+$SHAPE3D
+Na "smd/cms_soj28.wrl"
+Sc 0.5 0.55 0.5
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE SO28
+$MODULE SOD-123F
+Po 0 0 0 15 4FB27B0B 00000000 ~~
+Li SOD-123F
+Sc 0
+AR 
+Op 0 0 0
+T0 1.00076 2.60096 1.524 1.524 0 0.3048 N I 21 N "SOD-123F"
+T1 0.29972 -1.50114 0.79756 0.79756 0 0.11938 N V 21 N "VAL**"
+DS 0.39878 0 0.89916 0 0.254 21
+DS -0.20066 0 -1.09982 0 0.254 21
+DS -0.20066 0.39878 -0.20066 -0.39878 0.254 21
+DS 0.39878 0 -0.20066 0.39878 0.254 21
+DS 0.39878 0 -0.20066 -0.39878 0.254 21
+DC 1.89992 1.09982 1.89992 1.20142 0.381 21
+DS 0.70104 0.50038 0.70104 0.8001 0.381 21
+DS 0.70104 -0.70104 0.70104 0.59944 0.381 21
+DS -1.2954 -0.89916 1.2954 -0.89916 0.381 21
+DS -1.2954 0.9017 1.2954 0.9017 0.381 21
+$PAD
+Sh "2" R 0.79756 0.89916 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.50114 0
+$EndPAD
+$PAD
+Sh "1" R 0.79756 0.89916 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.69926 0.09906
+$EndPAD
+$EndMODULE SOD-123F
+$MODULE SOIC-20
+Po 0 0 0 15 00200000 00000000 ~~
+Li SOIC-20
+Sc 0
+AR 
+Op 0 0 0
+At SMD
+T0 0 1.143 1.27 1.27 0 0.0889 N V 20 N "VAL*"
+T1 -0.635 -1.397 1.27 1.27 1800 0.0889 N V 20 N "NAME*"
+DS -5.969 3.8608 -5.461 3.8608 0.06604 21
+DS -5.461 3.8608 -5.461 3.7338 0.06604 21
+DS -5.969 3.7338 -5.461 3.7338 0.06604 21
+DS -5.969 3.8608 -5.969 3.7338 0.06604 21
+DS -5.969 5.334 -5.461 5.334 0.06604 21
+DS -5.461 5.334 -5.461 3.8608 0.06604 21
+DS -5.969 3.8608 -5.461 3.8608 0.06604 21
+DS -5.969 5.334 -5.969 3.8608 0.06604 21
+DS -4.699 3.8608 -4.191 3.8608 0.06604 21
+DS -4.191 3.8608 -4.191 3.7338 0.06604 21
+DS -4.699 3.7338 -4.191 3.7338 0.06604 21
+DS -4.699 3.8608 -4.699 3.7338 0.06604 21
+DS -4.699 5.334 -4.191 5.334 0.06604 21
+DS -4.191 5.334 -4.191 3.8608 0.06604 21
+DS -4.699 3.8608 -4.191 3.8608 0.06604 21
+DS -4.699 5.334 -4.699 3.8608 0.06604 21
+DS -3.429 3.8608 -2.921 3.8608 0.06604 21
+DS -2.921 3.8608 -2.921 3.7338 0.06604 21
+DS -3.429 3.7338 -2.921 3.7338 0.06604 21
+DS -3.429 3.8608 -3.429 3.7338 0.06604 21
+DS -3.429 5.334 -2.921 5.334 0.06604 21
+DS -2.921 5.334 -2.921 3.8608 0.06604 21
+DS -3.429 3.8608 -2.921 3.8608 0.06604 21
+DS -3.429 5.334 -3.429 3.8608 0.06604 21
+DS -2.159 3.8608 -1.651 3.8608 0.06604 21
+DS -1.651 3.8608 -1.651 3.7338 0.06604 21
+DS -2.159 3.7338 -1.651 3.7338 0.06604 21
+DS -2.159 3.8608 -2.159 3.7338 0.06604 21
+DS -2.159 5.334 -1.651 5.334 0.06604 21
+DS -1.651 5.334 -1.651 3.8608 0.06604 21
+DS -2.159 3.8608 -1.651 3.8608 0.06604 21
+DS -2.159 5.334 -2.159 3.8608 0.06604 21
+DS -0.889 5.334 -0.381 5.334 0.06604 21
+DS -0.381 5.334 -0.381 3.8608 0.06604 21
+DS -0.889 3.8608 -0.381 3.8608 0.06604 21
+DS -0.889 5.334 -0.889 3.8608 0.06604 21
+DS -0.889 3.8608 -0.381 3.8608 0.06604 21
+DS -0.381 3.8608 -0.381 3.7338 0.06604 21
+DS -0.889 3.7338 -0.381 3.7338 0.06604 21
+DS -0.889 3.8608 -0.889 3.7338 0.06604 21
+DS 0.381 3.8608 0.889 3.8608 0.06604 21
+DS 0.889 3.8608 0.889 3.7338 0.06604 21
+DS 0.381 3.7338 0.889 3.7338 0.06604 21
+DS 0.381 3.8608 0.381 3.7338 0.06604 21
+DS 0.381 5.334 0.889 5.334 0.06604 21
+DS 0.889 5.334 0.889 3.8608 0.06604 21
+DS 0.381 3.8608 0.889 3.8608 0.06604 21
+DS 0.381 5.334 0.381 3.8608 0.06604 21
+DS 1.651 3.8608 2.159 3.8608 0.06604 21
+DS 2.159 3.8608 2.159 3.7338 0.06604 21
+DS 1.651 3.7338 2.159 3.7338 0.06604 21
+DS 1.651 3.8608 1.651 3.7338 0.06604 21
+DS 1.651 5.334 2.159 5.334 0.06604 21
+DS 2.159 5.334 2.159 3.8608 0.06604 21
+DS 1.651 3.8608 2.159 3.8608 0.06604 21
+DS 1.651 5.334 1.651 3.8608 0.06604 21
+DS 2.921 3.8608 3.429 3.8608 0.06604 21
+DS 3.429 3.8608 3.429 3.7338 0.06604 21
+DS 2.921 3.7338 3.429 3.7338 0.06604 21
+DS 2.921 3.8608 2.921 3.7338 0.06604 21
+DS 2.921 5.334 3.429 5.334 0.06604 21
+DS 3.429 5.334 3.429 3.8608 0.06604 21
+DS 2.921 3.8608 3.429 3.8608 0.06604 21
+DS 2.921 5.334 2.921 3.8608 0.06604 21
+DS -5.969 -3.8608 -5.461 -3.8608 0.06604 21
+DS -5.461 -3.8608 -5.461 -5.334 0.06604 21
+DS -5.969 -5.334 -5.461 -5.334 0.06604 21
+DS -5.969 -3.8608 -5.969 -5.334 0.06604 21
+DS -5.969 -3.7338 -5.461 -3.7338 0.06604 21
+DS -5.461 -3.7338 -5.461 -3.8608 0.06604 21
+DS -5.969 -3.8608 -5.461 -3.8608 0.06604 21
+DS -5.969 -3.7338 -5.969 -3.8608 0.06604 21
+DS -4.699 -3.7338 -4.191 -3.7338 0.06604 21
+DS -4.191 -3.7338 -4.191 -3.8608 0.06604 21
+DS -4.699 -3.8608 -4.191 -3.8608 0.06604 21
+DS -4.699 -3.7338 -4.699 -3.8608 0.06604 21
+DS -4.699 -3.8608 -4.191 -3.8608 0.06604 21
+DS -4.191 -3.8608 -4.191 -5.334 0.06604 21
+DS -4.699 -5.334 -4.191 -5.334 0.06604 21
+DS -4.699 -3.8608 -4.699 -5.334 0.06604 21
+DS -3.429 -3.7338 -2.921 -3.7338 0.06604 21
+DS -2.921 -3.7338 -2.921 -3.8608 0.06604 21
+DS -3.429 -3.8608 -2.921 -3.8608 0.06604 21
+DS -3.429 -3.7338 -3.429 -3.8608 0.06604 21
+DS -3.429 -3.8608 -2.921 -3.8608 0.06604 21
+DS -2.921 -3.8608 -2.921 -5.334 0.06604 21
+DS -3.429 -5.334 -2.921 -5.334 0.06604 21
+DS -3.429 -3.8608 -3.429 -5.334 0.06604 21
+DS -2.159 -3.7338 -1.651 -3.7338 0.06604 21
+DS -1.651 -3.7338 -1.651 -3.8608 0.06604 21
+DS -2.159 -3.8608 -1.651 -3.8608 0.06604 21
+DS -2.159 -3.7338 -2.159 -3.8608 0.06604 21
+DS -2.159 -3.8608 -1.651 -3.8608 0.06604 21
+DS -1.651 -3.8608 -1.651 -5.334 0.06604 21
+DS -2.159 -5.334 -1.651 -5.334 0.06604 21
+DS -2.159 -3.8608 -2.159 -5.334 0.06604 21
+DS -0.889 -3.7338 -0.381 -3.7338 0.06604 21
+DS -0.381 -3.7338 -0.381 -3.8608 0.06604 21
+DS -0.889 -3.8608 -0.381 -3.8608 0.06604 21
+DS -0.889 -3.7338 -0.889 -3.8608 0.06604 21
+DS -0.889 -3.8608 -0.381 -3.8608 0.06604 21
+DS -0.381 -3.8608 -0.381 -5.334 0.06604 21
+DS -0.889 -5.334 -0.381 -5.334 0.06604 21
+DS -0.889 -3.8608 -0.889 -5.334 0.06604 21
+DS 0.381 -3.7338 0.889 -3.7338 0.06604 21
+DS 0.889 -3.7338 0.889 -3.8608 0.06604 21
+DS 0.381 -3.8608 0.889 -3.8608 0.06604 21
+DS 0.381 -3.7338 0.381 -3.8608 0.06604 21
+DS 0.381 -3.8608 0.889 -3.8608 0.06604 21
+DS 0.889 -3.8608 0.889 -5.334 0.06604 21
+DS 0.381 -5.334 0.889 -5.334 0.06604 21
+DS 0.381 -3.8608 0.381 -5.334 0.06604 21
+DS 1.651 -3.7338 2.159 -3.7338 0.06604 21
+DS 2.159 -3.7338 2.159 -3.8608 0.06604 21
+DS 1.651 -3.8608 2.159 -3.8608 0.06604 21
+DS 1.651 -3.7338 1.651 -3.8608 0.06604 21
+DS 1.651 -3.8608 2.159 -3.8608 0.06604 21
+DS 2.159 -3.8608 2.159 -5.334 0.06604 21
+DS 1.651 -5.334 2.159 -5.334 0.06604 21
+DS 1.651 -3.8608 1.651 -5.334 0.06604 21
+DS 2.921 -3.7338 3.429 -3.7338 0.06604 21
+DS 3.429 -3.7338 3.429 -3.8608 0.06604 21
+DS 2.921 -3.8608 3.429 -3.8608 0.06604 21
+DS 2.921 -3.7338 2.921 -3.8608 0.06604 21
+DS 2.921 -3.8608 3.429 -3.8608 0.06604 21
+DS 3.429 -3.8608 3.429 -5.334 0.06604 21
+DS 2.921 -5.334 3.429 -5.334 0.06604 21
+DS 2.921 -3.8608 2.921 -5.334 0.06604 21
+DS 4.191 -3.7338 4.699 -3.7338 0.06604 21
+DS 4.699 -3.7338 4.699 -3.8608 0.06604 21
+DS 4.191 -3.8608 4.699 -3.8608 0.06604 21
+DS 4.191 -3.7338 4.191 -3.8608 0.06604 21
+DS 5.461 -3.7338 5.969 -3.7338 0.06604 21
+DS 5.969 -3.7338 5.969 -3.8608 0.06604 21
+DS 5.461 -3.8608 5.969 -3.8608 0.06604 21
+DS 5.461 -3.7338 5.461 -3.8608 0.06604 21
+DS 4.191 -3.8608 4.699 -3.8608 0.06604 21
+DS 4.699 -3.8608 4.699 -5.334 0.06604 21
+DS 4.191 -5.334 4.699 -5.334 0.06604 21
+DS 4.191 -3.8608 4.191 -5.334 0.06604 21
+DS 5.461 -3.8608 5.969 -3.8608 0.06604 21
+DS 5.969 -3.8608 5.969 -5.334 0.06604 21
+DS 5.461 -5.334 5.969 -5.334 0.06604 21
+DS 5.461 -3.8608 5.461 -5.334 0.06604 21
+DS 4.191 3.8608 4.699 3.8608 0.06604 21
+DS 4.699 3.8608 4.699 3.7338 0.06604 21
+DS 4.191 3.7338 4.699 3.7338 0.06604 21
+DS 4.191 3.8608 4.191 3.7338 0.06604 21
+DS 5.461 3.8608 5.969 3.8608 0.06604 21
+DS 5.969 3.8608 5.969 3.7338 0.06604 21
+DS 5.461 3.7338 5.969 3.7338 0.06604 21
+DS 5.461 3.8608 5.461 3.7338 0.06604 21
+DS 4.191 5.334 4.699 5.334 0.06604 21
+DS 4.699 5.334 4.699 3.8608 0.06604 21
+DS 4.191 3.8608 4.699 3.8608 0.06604 21
+DS 4.191 5.334 4.191 3.8608 0.06604 21
+DS 5.461 5.334 5.969 5.334 0.06604 21
+DS 5.969 5.334 5.969 3.8608 0.06604 21
+DS 5.461 3.8608 5.969 3.8608 0.06604 21
+DS 5.461 5.334 5.461 3.8608 0.06604 21
+DS 6.1214 -3.7338 -6.1214 -3.7338 0.1524 21
+DS -6.1214 3.7338 6.1214 3.7338 0.1524 21
+DS 6.5024 3.3528 6.5024 -3.3528 0.1524 21
+DS -6.5024 -3.3528 -6.5024 3.3528 0.1524 21
+DS -6.477 3.3782 6.477 3.3782 0.0508 21
+DA 6.1214 3.3528 6.5024 3.3528 900 0.1524 21
+DA -6.1214 -3.3528 -6.5024 -3.3528 900 0.1524 21
+DA 6.1214 -3.3528 6.1214 -3.7338 900 0.1524 21
+DA -6.1214 3.3528 -6.1214 3.7338 900 0.1524 21
+DA -6.5024 0 -6.5024 -1.27 1800 0.1524 21
+$PAD
+Sh "1" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5.715 5.0292
+$EndPAD
+$PAD
+Sh "2" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.445 5.0292
+$EndPAD
+$PAD
+Sh "3" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.175 5.0292
+$EndPAD
+$PAD
+Sh "4" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.905 5.0292
+$EndPAD
+$PAD
+Sh "5" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.635 5.0292
+$EndPAD
+$PAD
+Sh "6" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.635 5.0292
+$EndPAD
+$PAD
+Sh "7" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.905 5.0292
+$EndPAD
+$PAD
+Sh "8" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.175 5.0292
+$EndPAD
+$PAD
+Sh "9" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.445 5.0292
+$EndPAD
+$PAD
+Sh "10" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.715 5.0292
+$EndPAD
+$PAD
+Sh "11" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.715 -5.0292
+$EndPAD
+$PAD
+Sh "12" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.445 -5.0292
+$EndPAD
+$PAD
+Sh "13" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.175 -5.0292
+$EndPAD
+$PAD
+Sh "14" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.905 -5.0292
+$EndPAD
+$PAD
+Sh "15" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.635 -5.0292
+$EndPAD
+$PAD
+Sh "16" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.635 -5.0292
+$EndPAD
+$PAD
+Sh "17" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.905 -5.0292
+$EndPAD
+$PAD
+Sh "18" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.175 -5.0292
+$EndPAD
+$PAD
+Sh "19" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.445 -5.0292
+$EndPAD
+$PAD
+Sh "20" R 0.6604 2.032 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5.715 -5.0292
+$EndPAD
+$SHAPE3D
+Na "../models/SOIC-20.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE SOIC-20
+$MODULE SOT-143-B
+Po 0 0 0 15 49047621 00000000 ~~
+Li SOT-143-B
+Cd SOT-143-B
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -1.905 0.50038 0.50038 0 0.09906 N V 21 N "SOT-143-B"
+T1 0 0 0.50038 0.50038 0 0.09906 N I 21 N "Q***"
+DS -1.143 1.3589 -0.3556 1.3589 0.127 21
+DS -0.3556 0.6985 -0.3556 1.3589 0.127 21
+DS -0.9525 -0.6985 -0.9525 -1.3589 0.127 21
+DS 0.9525 0.6985 0.9525 1.3589 0.127 21
+DS -1.143 0.6985 -1.143 1.3589 0.127 21
+DS 0.9525 -0.6985 0.9525 -1.3589 0.127 21
+DS -1.4986 -0.6985 1.4986 -0.6985 0.127 21
+DS 1.4986 -0.6985 1.4986 0.6985 0.127 21
+DS 1.4986 0.6985 -1.4986 0.6985 0.127 21
+DS -1.4986 0.6985 -1.4986 -0.6985 0.127 21
+$PAD
+Sh "1" R 1.00076 1.00076 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75184 1.05664
+$EndPAD
+$PAD
+Sh "3" R 0.59944 1.00076 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9525 -1.05664
+$EndPAD
+$PAD
+Sh "2" R 0.59944 1.00076 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9525 1.05664
+$EndPAD
+$PAD
+Sh "4" R 0.59944 1.00076 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9525 -1.05664
+$EndPAD
+$SHAPE3D
+Na "../models/SOT-143-B.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE SOT-143-B
+$MODULE TC2030-MCP-NL
+Po 0 0 0 15 4FBD29CB 00000000 ~~
+Li TC2030-MCP-NL
+Sc 0
+AR 
+Op 0 0 0
+T0 1.016 -4.953 1.524 1.524 0 0.3048 N I 21 N "TC2030-MCP-NL"
+T1 0.635 -2.794 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS 2.54 -1.524 -3.048 -1.524 0.254 21
+DS -3.048 -1.524 -3.048 1.524 0.254 21
+DS -3.048 1.524 3.048 1.524 0.254 21
+DS 3.048 1.524 3.048 -1.524 0.254 21
+DS 3.048 -1.524 2.54 -1.524 0.254 21
+$PAD
+Sh "0" C 0.99568 0.99568 0 0 0
+Dr 0.99568 0 0
+At STD N 00E08000
+Ne 0 ""
+Po 2.54 1.016
+$EndPAD
+$PAD
+Sh "0" C 0.99568 0.99568 0 0 0
+Dr 0.99568 0 0
+At STD N 00E08000
+Ne 0 ""
+Po 2.54 -1.016
+$EndPAD
+$PAD
+Sh "2" C 0.78486 0.78486 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po -1.27 -0.635
+$EndPAD
+$PAD
+Sh "4" C 0.78486 0.78486 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 0 -0.635
+$EndPAD
+$PAD
+Sh "6" C 0.78486 0.78486 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 1.27 -0.635
+$EndPAD
+$PAD
+Sh "5" C 0.78486 0.78486 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 1.27 0.635
+$EndPAD
+$PAD
+Sh "3" C 0.78486 0.78486 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 0 0.635
+$EndPAD
+$PAD
+Sh "1" C 0.78486 0.78486 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po -1.27 0.635
+$EndPAD
+$PAD
+Sh "0" C 0.99568 0.99568 0 0 0
+Dr 0.99568 0 0
+At STD N 00E08000
+Ne 0 ""
+Po -2.54 0
+$EndPAD
+$EndMODULE TC2030-MCP-NL
+$MODULE WE-HCC-1210
+Po 0 0 0 15 4FB2278D 00000000 ~~
+Li WE-HCC-1210
+Sc 0
+AR 
+Op 0 0 0
+T0 2.3495 7.0993 1.524 1.524 0 0.3048 N I 21 N "WE-HCC-1210"
+T1 -3.50012 -6.74878 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS 6.05028 5.69976 6.05028 3.1496 0.381 21
+DS 6.05028 -5.64896 6.05028 -3.1496 0.381 21
+DS -6.05028 -5.64896 -6.05028 -3.1496 0.381 21
+DS -6.05028 5.69976 -6.05028 3.1496 0.381 21
+DS 0 -5.64896 -6.05028 -5.64896 0.381 21
+DS 6.05028 -5.64896 0 -5.64896 0.381 21
+DS 6.05028 5.7023 0 5.7023 0.381 21
+DS 0 5.7023 -6.05028 5.7023 0.381 21
+$PAD
+Sh "2" R 2.8956 5.3975 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.00126 0
+$EndPAD
+$PAD
+Sh "1" R 2.89814 5.3975 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.99872 0.00254
+$EndPAD
+$EndMODULE WE-HCC-1210
+$EndLIBRARY
