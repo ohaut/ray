@@ -1,12 +1,13 @@
 #include <ESP8266WebServer.h>
 #include <FS.h>
 #include "ConfigMap.h"
+#include <Ticker.h>
 
 ConfigMap configData;
 
 #define CONFIG_FILENAME "/config.tsv"
 
-ESP8266WebServer _server(80);
+ESP8266WebServer* _server;
 
 void handleIndex() {
   String form =
@@ -19,7 +20,7 @@ void handleIndex() {
        </body>
       </html>)";
       
-  _server.send(200, "text/html", form);
+  _server->send(200, "text/html", form);
 
 }
 
@@ -99,7 +100,7 @@ void handleConfig() {
         <div><label>MQTT Device ID:</label><input name='mqtt_id' value='$mqtt_id'></div>
         <div><label>MQTT (out) path:</label><input name='mqtt_out_path' value='$mqtt_out_path'></div>
        
-          <input type="submit" value="Send">
+          <input type="submit" value="Save and Reboot">
        </form>
        </body>
       </html>)";
@@ -110,7 +111,7 @@ void handleConfig() {
     form.replace(var_name, configData[form_field]);
   }
 
-  _server.send(200, "text/html", form);
+  _server->send(200, "text/html", form);
 }
 
 // convert a single hex digit character to its integer value
@@ -164,27 +165,29 @@ void saveConfig() {
 void handleConfigPost() {
   
   for (int i=0; form_fields[i]; i++) {
-    char *str = strdup(_server.arg(form_fields[i]).c_str());
+    char *str = strdup(_server->arg(form_fields[i]).c_str());
     urldecode(str);
     configData.set(form_fields[i], str);
     free(str);
   }
   saveConfig();
   handleConfig();
+  for (int i=0;i<100;i++){
+    yield();
+    delay(10);
+  }
+  ESP.restart();
 }
 
 
 
-void configServerSetup() {
+void configServerSetup(ESP8266WebServer *server) {
+  _server = server;
   configSetup();
-
-  _server.on("/", HTTP_GET, handleIndex);
-  _server.on("/config/", HTTP_GET,  handleConfig);
-  _server.on("/config/", HTTP_POST,  handleConfigPost);
-  _server.begin();
-}
-
-void configServerHandle() {
-  _server.handleClient();
+ 
+  server->on("/", HTTP_GET, handleIndex);
+  server->on("/config/", HTTP_GET,  handleConfig);
+  server->on("/config/", HTTP_POST,  handleConfigPost);
+  
 }
 

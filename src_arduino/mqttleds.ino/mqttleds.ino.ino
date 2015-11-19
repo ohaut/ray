@@ -3,6 +3,8 @@
 #include <ESP8266mDNS.h>
 #include <ArduinoOTA.h>
 #include <PubSubClient.h>
+#include <Ticker.h>
+#include <ESP8266WebServer.h>
 
 #include "LEDDimmers.h"
 #include "MQTTDevice.h"
@@ -15,8 +17,11 @@ int led_pin = 13;
 
 LEDDimmers dimmers;
 MQTTDevice mqtt;
+bool mqtt_enabled = false;
 
 extern ConfigMap configData;
+
+ESP8266WebServer server(80);
 
 void fancy_blink(){
   for (int i=0;i<30;i++){
@@ -37,6 +42,75 @@ void dimmer_status(int led, byte* payload, unsigned int length) {
 
   String value(str);
   dimmers.setDimmer(led, value.toFloat()/100.0);
+  
+}
+
+
+void setDimmerAndPublish(int channel, int value) {
+
+    dimmers.setDimmer(channel, (float)value/100.0);
+    if (mqtt_enabled) {
+      char  pub_name[8];
+      char  pub_data[6];
+      
+      sprintf(pub_name, "led%d", channel+1);
+      sprintf(pub_data, "%d", value);
+      mqtt.publish(pub_name, pub_data);
+    }
+}
+
+void handleSetLed() {
+
+    int ch , val;
+    char* str_ch = strdup(server.arg("ch").c_str());
+    char* str_val = strdup(server.arg("val").c_str());
+
+    if (!strlen(str_val)) { /* we asume no ch means all channels */
+      server.send(422, "text/html", "val parameter missing on URL");
+      goto _exit;
+    }
+    ch = atoi(str_ch);
+    val = atoi(str_val);
+
+    if (ch<0 || ch>=3) {
+      server.send(422, "text/html", "ch out of range (0..2)");
+      goto _exit;
+    }
+
+    if (val<0 || val>100) {
+      server.send(422, "text/html", "val out of range (0..100)");
+      goto _exit;
+    }
+
+    if (strlen(str_ch))
+      setDimmerAndPublish(ch, val);
+    else {
+      for (ch=0; ch<N_DIMMERS; ch++)
+        setDimmerAndPublish(ch, val);
+    }
+    server.send(200, "text/html", "channel set correctly");
+ _exit:
+    free (str_ch);
+    free (str_val);
+}
+
+
+
+
+void setupMQTTHandling() {
+  mqtt.setup(configData["mqtt_server"],
+             configData["mqtt_path"],
+             configData["mqtt_id"]);
+            
+  mqtt.setup();
+
+  mqtt.subscribe("led1", [](byte *data, unsigned int length) {
+                              dimmer_status(0, data, length); });
+  mqtt.subscribe("led2", [](byte *data, unsigned int length) {
+                              dimmer_status(1, data, length); });
+  mqtt.subscribe("led3", [](byte *data, unsigned int length) {
+                              dimmer_status(2, data, length); });
+
 }
 
 void setup(void){
@@ -52,12 +126,11 @@ void setup(void){
   pinMode(led_pin, OUTPUT);
   digitalWrite(led_pin, LOW);
 
- 
-
-  configServerSetup();
-  wifiSetup();
+  configServerSetup(&server);
   
-  ArduinoOTA.setHostname("Lamp18W-prod");
+  bool wifi_connected = wifiSetup();
+  
+  ArduinoOTA.setHostname(configData["mqtt_id"]);
   ArduinoOTA.onStart([]() { dimmers.halt(); });
   ArduinoOTA.onError([](ota_error_t error) { dimmers.restart(); }); 
   ArduinoOTA.onEnd(fancy_blink);
@@ -66,31 +139,26 @@ void setup(void){
   /* failsafe recovery during devel */
   for (int i=0;i<20; i++)
   {
-      //dimmers.setDimmer(0, ((float)19-i)/50.0);
       ArduinoOTA.handle();
       delay(100);
   }
-  
-  mqtt.setup(configData["mqtt_server"],
-             configData["mqtt_path"],
-             configData["mqtt_id"]);
-            
-  mqtt.setup();
 
-  mqtt.subscribe("led1", [](byte *data, unsigned int length) {
-                              dimmer_status(0, data, length); });
-  mqtt.subscribe("led2", [](byte *data, unsigned int length) {
-                              dimmer_status(1, data, length); });
-  mqtt.subscribe("led3", [](byte *data, unsigned int length) {
-                              dimmer_status(2, data, length); });
+  mqtt_enabled = strlen(configData["mqtt_server"])>0;
+
+  if (mqtt_enabled) 
+    setupMQTTHandling();
   
-  digitalWrite(led_pin, HIGH);
+  if (wifi_connected) 
+    digitalWrite(led_pin, HIGH);
   
+  server.on("/setLed", HTTP_GET,  handleSetLed);
+  server.begin();
+
  }
 
 
 
-void sendStartupValues() {
+void sendMQTTStartupValues() {
   static bool startup_values_sent = false;
   if (mqtt.connected() && !startup_values_sent)
   {
@@ -108,11 +176,14 @@ void sendStartupValues() {
 }
 
 
+
 void loop(void){
   ArduinoOTA.handle();
-  configServerHandle();
-  mqtt.handle();
-  sendStartupValues();
+  server.handleClient();
+  if (mqtt_enabled)  {
+    mqtt.handle();
+    sendMQTTStartupValues();
+  }
 } 
 
 
