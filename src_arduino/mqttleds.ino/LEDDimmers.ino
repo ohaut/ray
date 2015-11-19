@@ -8,6 +8,10 @@
 
 int DIMMER_PIN[] = {14, 5, 15};
 
+void ticker_update(LEDDimmers *cls) {
+  cls->update();
+}
+
 void LEDDimmers::setup() {
   analogWriteRange(ANALOG_RANGE);
   for (int i=0; i<N_DIMMERS; i++) {
@@ -16,7 +20,9 @@ void LEDDimmers::setup() {
                 BOOT_VALUE);
     pinMode(DIMMER_PIN[i], OUTPUT);
    _dimmers[i] = BOOT_VALUE_F;  
+   _dimmers_val[i] = BOOT_VALUE_F;
   }
+  update_ticker.attach(DIMMER_PERIOD, ticker_update, this);
 }
 
 void LEDDimmers::halt()
@@ -24,16 +30,34 @@ void LEDDimmers::halt()
   for (int i=0; i<N_DIMMERS; i++) {
     analogWrite(DIMMER_PIN[i], 0);   
   }
+  update_ticker.detach();
 }
 
 void LEDDimmers::restart() {
   for (int i=0; i<N_DIMMERS; i++) {
     setDimmer(i, _dimmers[i]);
   }
+  update_ticker.attach(DIMMER_PERIOD, ticker_update, this);
 }
 
 void LEDDimmers::setGamma(float gamma) {
   _gamma = gamma;
+}
+
+
+void LEDDimmers::update() {
+
+  for (int n=0; n<N_DIMMERS; n++) {
+    float step = (_dimmers[n]-_dimmers_val[n])*DIMMER_STEP;
+     if (_dimmers_val[n]!=_dimmers[n]) {
+        if (fabs(_dimmers_val[n] - _dimmers[n])<=step)
+          _dimmers_val[n] = _dimmers[n];
+        else
+          _dimmers_val[n] += step;   
+     }
+     analogWrite(DIMMER_PIN[n],
+                 pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE));
+  }
 }
 
 void LEDDimmers::setDimmer(int n, float value) {
@@ -44,8 +68,7 @@ void LEDDimmers::setDimmer(int n, float value) {
    if (value<0.0) value = 0.0;
    if (value>1.0) value = 1.0;
 
-   analogWrite(DIMMER_PIN[n],
-               pow(value, _gamma)*float(ANALOG_RANGE));
+  
 
    _dimmers[n] = value;  
 }
