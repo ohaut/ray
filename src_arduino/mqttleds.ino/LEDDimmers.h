@@ -13,7 +13,7 @@ private:
   float _dimmers_val[N_DIMMERS];
   Ticker update_ticker;
 public:
-  void setup();
+  void setup(float* boot_values=NULL);
   void update();
   void setGamma(float gamma);
   void setDimmer(int n, float value);  

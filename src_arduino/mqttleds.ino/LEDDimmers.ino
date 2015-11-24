@@ -12,15 +12,17 @@ void ticker_update(LEDDimmers *cls) {
   cls->update();
 }
 
-void LEDDimmers::setup() {
+void LEDDimmers::setup(float* boot_values) {
+
   analogWriteRange(ANALOG_RANGE);
   for (int i=0; i<N_DIMMERS; i++) {
-    
-    analogWrite(DIMMER_PIN[i],
-                BOOT_VALUE);
+    float boot_value = boot_values?boot_values[i]:1.0;
+    float analog_val = pow(boot_value,
+                           _gamma)*float(ANALOG_RANGE);
+    analogWrite(DIMMER_PIN[i], analog_val);
     pinMode(DIMMER_PIN[i], OUTPUT);
-   _dimmers[i] = BOOT_VALUE_F;  
-   _dimmers_val[i] = BOOT_VALUE_F;
+   _dimmers[i] = boot_value;
+   _dimmers_val[i] = boot_value;
   }
   update_ticker.attach(DIMMER_PERIOD, ticker_update, this);
 }
@@ -28,7 +30,7 @@ void LEDDimmers::setup() {
 void LEDDimmers::halt()
 {
   for (int i=0; i<N_DIMMERS; i++) {
-    analogWrite(DIMMER_PIN[i], 0);   
+    analogWrite(DIMMER_PIN[i], 0);
   }
   update_ticker.detach();
 }
@@ -53,7 +55,7 @@ void LEDDimmers::update() {
         if (fabs(_dimmers_val[n] - _dimmers[n])<=step)
           _dimmers_val[n] = _dimmers[n];
         else
-          _dimmers_val[n] += step;   
+          _dimmers_val[n] += step;
      }
      analogWrite(DIMMER_PIN[n],
                  pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE));
@@ -62,15 +64,13 @@ void LEDDimmers::update() {
 
 void LEDDimmers::setDimmer(int n, float value) {
 
-   if (!(n>=0 && n<N_DIMMERS)) 
+   if (!(n>=0 && n<N_DIMMERS))
       return;
 
    if (value<0.0) value = 0.0;
    if (value>1.0) value = 1.0;
 
-  
-
-   _dimmers[n] = value;  
+   _dimmers[n] = value;
 }
 
 float LEDDimmers::getDimmer(int n) {

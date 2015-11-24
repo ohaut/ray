@@ -116,17 +116,21 @@ void setupMQTTHandling() {
 void setup(void){
 
   Serial.begin(115200);
-
-  dimmers.setup();
-  dimmers.setDimmer(0, BOOT_DIMMER_VALUE);
-  dimmers.setDimmer(1, BOOT_DIMMER_VALUE);
-  dimmers.setDimmer(2, BOOT_DIMMER_VALUE);
-  
-  /* switch on led */
   pinMode(led_pin, OUTPUT);
   digitalWrite(led_pin, LOW);
 
   configServerSetup(&server);
+
+  
+  
+
+  /* switch on leds */
+
+  float boot_values[] = { configData["startup_val_0"]? atoi(configData["startup_val_0"])/100.0 : 1.0,
+                          configData["startup_val_1"]? atoi(configData["startup_val_1"])/100.0 : 1.0,
+                          configData["startup_val_2"]? atoi(configData["startup_val_2"])/100.0 : 1.0 };
+  
+  dimmers.setup(boot_values);
   
   bool wifi_connected = wifiSetup();
   
