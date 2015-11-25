@@ -4,7 +4,7 @@ bool wifiSetup()
 {
   int connect_tries=3;
   
-  WiFi.mode(WIFI_AP_STA);
+  WiFi.mode(WIFI_STA);
   WiFi.begin(configData["wifi_sta_ap"],
              configData["wifi_sta_pass"]);
   while(--connect_tries && WiFi.waitForConnectResult() != WL_CONNECTED){
