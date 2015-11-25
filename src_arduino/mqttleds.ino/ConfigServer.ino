@@ -34,14 +34,19 @@ void handleIndex() {
 void setDefaultConfig();
 
 void setDefaultConfig() {
+  char esp_id[32];
+
+  // create an unique ID for the AP SSID and MQTT ID
+  sprintf(esp_id, "MICRODIMMER_%08x", ESP.getChipId());
   configData.set("wifi_sta_ap", "nonet");
   configData.set("wifi_sta_pass", "nonet");
-  configData.set("wifi_ap_ssid", "MICRODIMMER");
+
+  configData.set("wifi_ap_ssid", esp_id);
   configData.set("wifi_ap_pass", "dimmer123456");
   configData.set("mqtt_server", "192.168.1.251");
   configData.set("mqtt_path", "/home/kitchen/lamp1");
   configData.set("mqtt_out_path", "/home/kitchen/lamp1/status");
-  configData.set("mqtt_id", "kitchenLamp1");
+  configData.set("mqtt_id", esp_id);
 
 }
 
