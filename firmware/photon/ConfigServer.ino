@@ -185,6 +185,15 @@ void handleConfigPost() {
 }
 
 
+float getDimmerStartupVal(int dimmer) {
+    char key[16];
+    const char *val;
+    sprintf(key, "startup_val_l%d", dimmer);
+    val = configData[key];
+    
+    if (val && strlen(val)) return atoi(val)/100.0;
+    else                    return 1.0;
+}
 
 void configServerSetup(ESP8266WebServer *server) {
   _server = server;

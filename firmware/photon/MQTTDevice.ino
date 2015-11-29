@@ -18,7 +18,8 @@ void MQTTDevice::setup(const char* server, const char *path, const char *client_
   _user = user;
   _pass = pass;
   _elements = NULL;     
-  _last_reconnect = millis() - reconnect_retry_time;          
+  _last_reconnect = millis() - reconnect_retry_time;      
+  setup();    
 }
   
 void MQTTDevice::subscribe(const char *name, SUBS_CALLBACK(fn)) {

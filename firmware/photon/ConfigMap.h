@@ -33,7 +33,6 @@ class ConfigMap {
   ConfigEntry* _find(const char *key) {
     ConfigEntry* p = entry_list;
     while (p) {
-      Serial.printf("f key=%s, val=%s s=%s\n", p->key, p->value, key);
       if (strcmp(p->key, key)==0) return p;
       p = p->next;
     }
@@ -43,7 +42,6 @@ class ConfigMap {
   
   void set(const char* key, const char* value) {
     ConfigEntry* p = _find(key);
-    Serial.printf("set: %s => %s\n", key, value);
     if (p) {
       p->update(value);
     } else {

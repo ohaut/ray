@@ -19,8 +19,8 @@ void LEDDimmers::setup(float* boot_values) {
     float boot_value = boot_values?boot_values[i]:1.0;
     float analog_val = pow(boot_value,
                            _gamma)*float(ANALOG_RANGE);
-    analogWrite(DIMMER_PIN[i], analog_val);
     pinMode(DIMMER_PIN[i], OUTPUT);
+    analogWrite(DIMMER_PIN[i], analog_val);
    _dimmers[i] = boot_value;
    _dimmers_val[i] = boot_value;
   }
@@ -46,7 +46,6 @@ void LEDDimmers::setGamma(float gamma) {
   _gamma = gamma;
 }
 
-
 void LEDDimmers::update() {
 
   for (int n=0; n<N_DIMMERS; n++) {
@@ -56,9 +55,9 @@ void LEDDimmers::update() {
           _dimmers_val[n] = _dimmers[n];
         else
           _dimmers_val[n] += step;
+        analogWrite(DIMMER_PIN[n],
+                    pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE));
      }
-     analogWrite(DIMMER_PIN[n],
-                 pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE));
   }
 }
 
