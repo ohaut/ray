@@ -28,8 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:components
-LIBS:tsm2314
 LIBS:ledboard-cache
 EELAYER 25 0
 EELAYER END
@@ -45,24 +43,6 @@ Comment2 "miguelangel@ajo.es"
 Comment3 "+(34) 636522569"
 Comment4 "GPLv3 OSHW"
 $EndDescr
-$Comp
-L MHOLE Z1
-U 1 1 55EB93A2
-P 5850 950
-F 0 "Z1" H 5650 1000 60  0000 C CNN
-F 1 "MHOLE" H 5850 950 60  0001 C CNN
-F 2 "library:MHOLE_3MM" H 5850 950 60  0001 C CNN
-F 3 "TODO_DATASHEET" H 5850 950 60  0001 C CNN
-F 4 "MHOLE" H 5650 900 60  0000 C CNN "Label"
-F 5 "Mounting Hole" H 5850 950 60  0001 C CNN "Keywords"
-F 6 "NOT_ASSEMBLE - NOT_ASSEMBLE" H 5850 950 60  0001 C CNN "First Manufacturer Code"
-F 7 "NOT_ASSEMBLE - NOT_ASSEMBLE" H 5850 950 60  0001 C CNN "Second Manufacturer Code"
-F 8 "~" H 5850 950 60  0000 C CNN "Variant"
-F 9 "NOT_ASSEMBLE - NOT_ASSEMBLE" H 5850 950 60  0001 C CNN "Fast Supplier Code 1"
-	1    5850 950 
-	1    0    0    -1  
-$EndComp
-NoConn ~ 6050 950 
 $Comp
 L +3.3V #PWR01
 U 1 1 55EBBB15
@@ -328,8 +308,6 @@ F 3 "" H 1100 5350 60  0000 C CNN
 	1    1100 5350
 	-1   0    0    1   
 $EndComp
-Text Notes 5700 1950 0    60   ~ 0
-MOUNTING\nHOLES
 Text Notes 4950 5750 0    60   ~ 0
 WIFI/MICROPROCESSOR
 $Comp
@@ -375,16 +353,6 @@ Wire Notes Line
 	5150 650  5150 2550
 Wire Notes Line
 	5150 2550 600  2550
-Wire Notes Line
-	5450 650  5450 1950
-Wire Notes Line
-	5450 1950 6200 1950
-Wire Notes Line
-	6200 1950 6200 650 
-Wire Notes Line
-	6200 650  5450 650 
-Wire Wire Line
-	5950 950  6050 950 
 Wire Wire Line
 	4550 3800 4200 3800
 Wire Wire Line
@@ -467,17 +435,6 @@ F 3 "" H 2950 1000 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DIODE D1
-U 1 1 562C0A5D
-P 3250 800
-F 0 "D1" H 3250 900 40  0000 C CNN
-F 1 "1N4148 SMD" H 3250 700 40  0000 C CNN
-F 2 "Diodes_SMD:SOD-123" H 3250 800 60  0001 C CNN
-F 3 "" H 3250 800 60  0001 C CNN
-	1    3250 800 
-	-1   0    0    1   
-$EndComp
-$Comp
 L GND #PWR012
 U 1 1 562C0A5E
 P 4250 2250
@@ -511,7 +468,7 @@ F 3 "" H 4250 1450 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L DIODESCH D2
+L D_Schottky D2
 U 1 1 562C0A62
 P 3250 1550
 F 0 "D2" H 3250 1650 40  0000 C CNN
@@ -519,7 +476,7 @@ F 1 "SS14" H 3250 1450 40  0000 C CNN
 F 2 "Diodes_SMD:DO-214BA" H 3250 1550 60  0001 C CNN
 F 3 "" H 3250 1550 60  0001 C CNN
 	1    3250 1550
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 $Comp
 L C C1
@@ -614,7 +571,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 1300 3250 1300
 Wire Wire Line
-	3250 1300 3250 1350
+	3250 1300 3250 1400
 Wire Wire Line
 	2300 2050 2300 1950
 Wire Wire Line
@@ -632,14 +589,14 @@ Wire Wire Line
 Wire Wire Line
 	3900 1650 3900 2050
 Wire Wire Line
-	3250 1750 3250 2050
+	3250 1700 3250 2050
 Wire Wire Line
 	3600 1200 4250 1200
 Connection ~ 4250 1200
 Wire Wire Line
-	2300 800  3050 800 
+	2300 800  3150 800 
 Wire Wire Line
-	3450 800  3900 800 
+	3350 800  3900 800 
 Wire Wire Line
 	3900 800  3900 1350
 Connection ~ 3900 1200
@@ -998,5 +955,16 @@ Wire Wire Line
 	5000 4500 5150 4500
 Connection ~ 1200 1900
 Text Notes 6600 950  0    60   ~ 0
-V1.00B (TODO)\n  fix D1 footprint inverted\n  fix D2 footprint inverted 
+CHANGELOG\n  * V1.00B\n     - fixed D1 & D2 inverted footprint\n     - increased pad hole sizes for wires.
+$Comp
+L D_Small D1
+U 1 1 565F4376
+P 3250 800
+F 0 "D1" H 3200 880 50  0000 L CNN
+F 1 "1N4148 SMD" H 3100 720 50  0000 L CNN
+F 2 "Diodes_SMD:SOD-123" V 3250 800 60  0001 C CNN
+F 3 "" V 3250 800 60  0000 C CNN
+	1    3250 800 
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
