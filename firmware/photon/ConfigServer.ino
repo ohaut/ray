@@ -24,13 +24,6 @@ void handleIndex() {
 
 }
 
-
- const char* form_fields[]={"wifi_sta_ap", "wifi_sta_pass", "mqtt_server",
-                             "mqtt_path", "mqtt_id", "startup_val_l0", 
-                             "startup_val_l1", "startup_val_l2", "mqtt_out_path",
-                             "wifi_ap_ssid", "wifi_ap_pass",
-                             NULL};
-
 void setDefaultConfig();
 
 void setDefaultConfig() {
@@ -51,31 +44,9 @@ void setDefaultConfig() {
 }
 
 void configSetup() {
-  
-  setDefaultConfig();
   SPIFFS.begin();
-  File configFile = SPIFFS.open(CONFIG_FILENAME, "r");
-  
-
-  /* tiny TSV parser, move into ConfigMap */
-  String key="", value="";
-  bool parsing_value=false;
-  while (configFile.available()) {
-    int val = configFile.read();
-    if (val=='\n' && key.length()!=0) {
-      configData.set(key.c_str(), value.c_str());
-      key = "";
-      value = "";
-      parsing_value = false;
-    } else if (val=='\t') {
-      parsing_value = true;
-    } else {
-      if (parsing_value) value += (char)val;
-      else               key += (char)val;
-    }
-  }
-
-  configFile.close();
+  setDefaultConfig();
+  configData.readTSV(CONFIG_FILENAME);
 }
 
 void handleConfig() {
@@ -107,14 +78,13 @@ void handleConfig() {
        
           <input type="submit" value="Save and Reboot">
        </form>
+         My WiFi STA IP: $IP
        </body>
       </html>)";
-  for (int i; form_fields[i]; i++) {
-    const char *form_field = form_fields[i];
-    String var_name = "$";
-    var_name += form_field;
-    form.replace(var_name, configData[form_field]);
-  }
+
+  configData.replaceVars(form);
+
+  form.replace("$IP", WiFi.localIP().toString());
 
   _server->send(200, "text/html", form);
 }
@@ -153,30 +123,29 @@ void urldecode(char *urlbuf)
     *dst = '\0';
 }
 
-
-/* move this into ConfigMap */
-void saveConfig() {
-  File configFile = SPIFFS.open(CONFIG_FILENAME, "w");
-  for (int i=0; form_fields[i]; i++) {
-    String str = form_fields[i];
-    str += '\t';
-    str += configData[form_fields[i]];
-    str += '\n';
-    configFile.write((const uint8_t*)str.c_str(), str.length());
-  }
-  configFile.close();
-}
-
 void handleConfigPost() {
-  
-  for (int i=0; form_fields[i]; i++) {
-    char *str = strdup(_server->arg(form_fields[i]).c_str());
-    urldecode(str);
-    configData.set(form_fields[i], str);
-    free(str);
-  }
-  saveConfig();
+  /* Grab every known config entry from the POST request arguments,
+   * urldecode it, and set it back to the config object.
+   */
+  configData.foreach(
+      [](const char* key, const char* value) {
+        const char *_str = _server->arg(key).c_str();
+        if (_str) {
+          char *str = strdup(_str);
+          urldecode(str);
+          configData.set(key, str);
+          free(str);
+        }
+      }
+  );
+
+  /* write a TSV file */
+  configData.writeTSV(CONFIG_FILENAME);
+
+  /* return the form again with the new data */
   handleConfig();
+
+  /* allow for the data to be sent back to browser */
   for (int i=0;i<100;i++){
     yield();
     delay(10);
