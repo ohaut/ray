@@ -19,7 +19,7 @@ void handleIndex() {
        </ul>
        </body>
       </html>)";
-      
+
   _server->send(200, "text/html", form);
 
 }
@@ -33,6 +33,9 @@ void setDefaultConfig() {
   sprintf(esp_id, "MICRODIMMER_%08x", ESP.getChipId());
   configData.set("wifi_sta_ap", "nonet");
   configData.set("wifi_sta_pass", "nonet");
+  configData.set("startup_val_l0", "0");
+  configData.set("startup_val_l1", "0");
+  configData.set("startup_val_l2", "0");
 
   configData.set("wifi_ap_ssid", esp_id);
   configData.set("wifi_ap_pass", "dimmer123456");
@@ -58,7 +61,7 @@ void handleConfig() {
          </style>
       <body>
        <h1>Configuration</h1>
-       <form action="/config/" method="POST">   
+       <form action="/config/" method="POST">
         <h2>Lamp startup settings (0-100 or empty to get it from net)</h2>
         <div><label>Channel 0</label><input name='startup_val_l0' value='$startup_val_l0'></div>
         <div><label>Channel 1</label><input name='startup_val_l1' value='$startup_val_l1'></div>
@@ -75,7 +78,7 @@ void handleConfig() {
         <div><label>MQTT (in) path:</label><input name='mqtt_path' value='$mqtt_path'></div>
         <div><label>MQTT Device ID:</label><input name='mqtt_id' value='$mqtt_id'></div>
         <div><label>MQTT (out) path:</label><input name='mqtt_out_path' value='$mqtt_out_path'></div>
-       
+
           <input type="submit" value="Save and Reboot">
        </form>
          My WiFi STA IP: $IP
@@ -159,7 +162,7 @@ float getDimmerStartupVal(int dimmer) {
     const char *val;
     sprintf(key, "startup_val_l%d", dimmer);
     val = configData[key];
-    
+
     if (val && strlen(val)) return atoi(val)/100.0;
     else                    return 1.0;
 }
@@ -167,10 +170,10 @@ float getDimmerStartupVal(int dimmer) {
 void configServerSetup(ESP8266WebServer *server) {
   _server = server;
   configSetup();
- 
+
   server->on("/", HTTP_GET, handleIndex);
   server->on("/config/", HTTP_GET,  handleConfig);
   server->on("/config/", HTTP_POST,  handleConfigPost);
-  
+
 }
 
