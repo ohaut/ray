@@ -2,6 +2,7 @@
 #include <FS.h>
 #include "ConfigMap.h"
 #include <Ticker.h>
+#include <functional>
 
 ConfigMap configData;
 
@@ -15,7 +16,8 @@ void handleIndex() {
       <body>
        <h1>LED Dimmer</h1>
        <ul>
-        <li> <a href="/config/">config</a> </li>
+        <li> <a href="/config/connection/">connection config</a> </li>
+        <li> <a href="/config/lamp/">lamp config</a> </li>
        </ul>
        </body>
       </html>)";
@@ -33,16 +35,16 @@ void setDefaultConfig() {
   sprintf(esp_id, "MICRODIMMER_%08x", ESP.getChipId());
   configData.set("wifi_sta_ap", "nonet");
   configData.set("wifi_sta_pass", "nonet");
-  configData.set("startup_val_l0", "0");
-  configData.set("startup_val_l1", "0");
-  configData.set("startup_val_l2", "0");
-
+  configData.set("mode", "lamp");
   configData.set("wifi_ap_ssid", esp_id);
   configData.set("wifi_ap_pass", "dimmer123456");
   configData.set("mqtt_server", "192.168.1.251");
   configData.set("mqtt_path", "/home/kitchen/lamp1");
   configData.set("mqtt_out_path", "/home/kitchen/lamp1/status");
   configData.set("mqtt_id", esp_id);
+
+  // TODO(mangelajo): we could make this a bit modular
+  setupDefaultConfigLight();
 
 }
 
@@ -61,11 +63,10 @@ void handleConfig() {
          </style>
       <body>
        <h1>Configuration</h1>
-       <form action="/config/" method="POST">
-        <h2>Lamp startup settings (0-100 or empty to get it from net)</h2>
-        <div><label>Channel 0</label><input name='startup_val_l0' value='$startup_val_l0'></div>
-        <div><label>Channel 1</label><input name='startup_val_l1' value='$startup_val_l1'></div>
-        <div><label>Channel 2</label><input name='startup_val_l2' value='$startup_val_l2'></div>
+       <form action="/config/connetion/" method="POST">
+        <h2>Dimmer mode</h2>
+        <div><label>Mode</label>$mode_select</div>
+
         <h2>WiFi settings</h2>
         <div><label>WiFi ssid:</label><input name='wifi_sta_ap' value='$wifi_sta_ap'></div>
         <div><label>WiFi password:</label><input name='wifi_sta_pass' type='password' value='$wifi_sta_pass'></div>
@@ -84,6 +85,23 @@ void handleConfig() {
          My WiFi STA IP: $IP
        </body>
       </html>)";
+
+  String mode_select = "<select name='mode'>";
+  char* mode = configData["mode"];
+  mode_select += "<option value='lamp' ";
+  if (strcmp(mode, "lamp") == 0)
+    mode_select += "selected";
+  mode_select += ">Lamp</option>";
+
+  mode_select += "<option value='greenhouse'";
+  if (strcmp(mode, "greenhouse") == 0)
+    mode_select += "selected";
+  mode_select += ">Greenhouse</option>";
+
+  mode_select += "</select>";
+
+
+  form.replace("$mode_select", mode_select);
 
   configData.replaceVars(form);
 
@@ -126,7 +144,8 @@ void urldecode(char *urlbuf)
     *dst = '\0';
 }
 
-void handleConfigPost() {
+
+void handlePost(std::function<void()> render_form_function) {
   /* Grab every known config entry from the POST request arguments,
    * urldecode it, and set it back to the config object.
    */
@@ -146,7 +165,7 @@ void handleConfigPost() {
   configData.writeTSV(CONFIG_FILENAME);
 
   /* return the form again with the new data */
-  handleConfig();
+  render_form_function();
 
   /* allow for the data to be sent back to browser */
   for (int i=0;i<100;i++){
@@ -156,6 +175,9 @@ void handleConfigPost() {
   ESP.restart();
 }
 
+void handleConfigPost() {
+  handlePost(handleConfig);
+}
 
 float getDimmerStartupVal(int dimmer) {
     char key[16];
@@ -172,8 +194,10 @@ void configServerSetup(ESP8266WebServer *server) {
   configSetup();
 
   server->on("/", HTTP_GET, handleIndex);
-  server->on("/config/", HTTP_GET,  handleConfig);
-  server->on("/config/", HTTP_POST,  handleConfigPost);
+  server->on("/config/connection/", HTTP_GET,  handleConfig);
+  server->on("/config/connection/", HTTP_POST,  handleConfigPost);
+  server->on("/config/lamp/", HTTP_GET,  handleConfigLamp);
+  server->on("/config/lamp/", HTTP_POST,  handleConfigLampPost);
 
 }
 
