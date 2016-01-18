@@ -63,7 +63,7 @@ void handleConfig() {
          </style>
       <body>
        <h1>Configuration</h1>
-       <form action="/config/connetion/" method="POST">
+       <form action="/config/connection/" method="POST">
         <h2>Dimmer mode</h2>
         <div><label>Mode</label>$mode_select</div>
 
