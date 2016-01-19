@@ -151,8 +151,8 @@ void handlePost(std::function<void()> render_form_function) {
    */
   configData.foreach(
       [](const char* key, const char* value) {
-        const char *_str = _server->arg(key).c_str();
-        if (_str) {
+        if (_server->hasArg(key)) {
+          const char *_str = _server->arg(key).c_str();
           char *str = strdup(_str);
           urldecode(str);
           configData.set(key, str);
@@ -200,4 +200,3 @@ void configServerSetup(ESP8266WebServer *server) {
   server->on("/config/lamp/", HTTP_POST,  handleConfigLampPost);
 
 }
-

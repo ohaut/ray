@@ -9,20 +9,23 @@ void setDimmerAndPublish(int channel, int value) {
     if (mqtt_enabled) {
       char  pub_name[8];
       char  pub_data[6];
-      
+
       sprintf(pub_name, "led%d", channel+1);
       sprintf(pub_data, "%d", value);
       mqtt.publish(pub_name, pub_data);
     }
 }
 
+bool startup_values_sent = false;
 
 void dimmer_status(int led, byte* payload, unsigned int length) {
   char str[4];
 
-  if (length>3) 
+  if (length>3)
     return;
-    
+
+  if (!startup_values_sent) return;
+
   memset(str, 0, length);
   memcpy(str, payload, length);
 
@@ -33,7 +36,6 @@ void dimmer_status(int led, byte* payload, unsigned int length) {
 
 
 void sendMQTTStartupValues() {
-  static bool startup_values_sent = false;
   if (mqtt.connected() && !startup_values_sent)
   {
     for (int i=0; i<3; i++) {
@@ -54,19 +56,22 @@ bool setupMQTTHandling() {
     mqtt.setup(configData["mqtt_server"],
                configData["mqtt_path"],
                configData["mqtt_id"]);
-  
-    mqtt.subscribe("led1", [](byte *data, unsigned int length) {
+
+    mqtt.setHandler("led1", [](byte *data, unsigned int length) {
                                 dimmer_status(0, data, length); });
-    mqtt.subscribe("led2", [](byte *data, unsigned int length) {
+    mqtt.setHandler("led2", [](byte *data, unsigned int length) {
                                 dimmer_status(1, data, length); });
-    mqtt.subscribe("led3", [](byte *data, unsigned int length) {
+    mqtt.setHandler("led3", [](byte *data, unsigned int length) {
                                 dimmer_status(2, data, length); });
+
+    // when the lamp goes off, we set LED1 to 0
+    mqtt.setLastWill(configData["mqtt_out_path"], "0", MQTTQOS2);
     mqtt_enabled = true;
     return true;
   }
   mqtt_enabled = false;
   return false;
-  
+
 }
 
 void MQTTHandle() {
@@ -75,5 +80,3 @@ void MQTTHandle() {
     sendMQTTStartupValues();
   }
 }
-
-

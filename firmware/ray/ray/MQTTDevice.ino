@@ -6,41 +6,42 @@ int reconnect_retry_time = 1000;
 const int max_reconnect_retry_time = 60000*2;
 
 MQTTDevice::MQTTDevice() {
-    _client = new PubSubClient(_mqttClient);   
+    _client = new PubSubClient(_mqttClient);
 }
 
 void MQTTDevice::setup(const char* server, const char *path, const char *client_id,
                        const char* user, const char* pass){
 
   _server = server;
-  _path = path;    
+  _path = path;
+  _last_will_path = NULL;
+  _last_will_val = NULL;
+  _last_will_qos = 0;
   _client_id = client_id;
   _user = user;
   _pass = pass;
-  _elements = NULL;     
-  _last_reconnect = millis() - reconnect_retry_time;      
-  setup();    
+  _elements = NULL;
+  _last_reconnect = millis() - reconnect_retry_time;
+  setup();
 }
-  
-void MQTTDevice::subscribe(const char *name, SUBS_CALLBACK(fn)) {
+
+void MQTTDevice::setLastWill(const char *subpath, const char *value, int qos) {
+  _last_will_path = subpath;
+  _last_will_val = value;
+  _last_will_qos = qos;
+}
+
+void MQTTDevice::setHandler(const char *name, SUBS_CALLBACK(fn)) {
   SubscribedElement** element=&_elements;
 
   while(*element!=NULL)
     element = &((*element)->next);
-   
+
   *element = new SubscribedElement(name, fn);
-
-  String path = _path;
-  path += "/";
-  path += name;
-
-  Serial.printf("path:%s\r\n", path.c_str());
-  _client->subscribe(path.c_str());
-  
 }
 
 
-  
+
 void MQTTDevice::publish(const char *name, const char *value) {
   String path = _getPathFor(name);
   _client->publish(path.c_str(), value, true);
@@ -49,7 +50,7 @@ void MQTTDevice::publish(const char *name, const char *value) {
     _client->loop();
     delay(5);
   }
-  
+
   path += "/state";
   _client->publish(path.c_str(), value, true);
   for (int i=0; i<20; i++) {
@@ -69,14 +70,9 @@ void MQTTDevice::setup(){
   _singleton = this;
   _client->setServer(_server, 1883);
   _client->setCallback(mqtt_handle_message);
-  
+
 }
 
-void MQTTDevice::_resubscribe() {
-  for (SubscribedElement *element=_elements; element!=NULL; element=element->next) {
-    _client->subscribe(_getPathFor(element->name).c_str());
-  }
-}
 
 String MQTTDevice::_getPathFor(const char *name) {
   String path = _path;
@@ -96,7 +92,7 @@ void MQTTDevice::_handle_message(char* topic, byte* payload, unsigned int length
 
 void MQTTDevice::handle() {
   _client->loop();
-  
+
   if (!_client->connected()) {
     long now = millis();
     if (now - _last_reconnect > reconnect_retry_time)
@@ -112,23 +108,33 @@ bool MQTTDevice::connected() {
   return _client->connected();
 }
 
-void MQTTDevice::_reconnect() {
+int MQTTDevice::_connect() {
+  Serial.printf("MQTT: Attempting connection to %s ...", _server);
+  if (_last_will_path) {
+    // TODO(mangelajo): add authentication and SSL support
+    return _client->connect(_client_id,
+                            _last_will_path, _last_will_qos,
+                            true, // willRetain
+                            _last_will_val);
+  } else {
+    return _client->connect(_client_id);
+  }
+}
 
+void MQTTDevice::_reconnect() {
   if (!_client->connected()) {
-    Serial.printf("Attempting MQTT connection to %s ...", _server);
     // Attempt to connect
-    if (_client->connect(_client_id, _getPathFor("led1/state").c_str(), MQTTQOS2, true, "0" )) {
-        Serial.println(" connected!");
-        _resubscribe();
+    if (_connect()) {
+        Serial.println("MQTT: connected!");
+        // wildcard subscription to everything under our path
+        _client->subscribe(_getPathFor("#").c_str());
     }
     else
     {
       reconnect_retry_time = reconnect_retry_time * 2;
       if (reconnect_retry_time > max_reconnect_retry_time)
         reconnect_retry_time = max_reconnect_retry_time;
-      Serial.println(" failed :(");
+      Serial.println("MQTT: failed :(");
     }
   }
 }
-
-
