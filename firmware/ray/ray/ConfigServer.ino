@@ -5,7 +5,7 @@
 #include <functional>
 #include "ray_global_defs.h"
 #include "consts.h"
-
+#include "../data.h"
 ConfigMap configData;
 
 #define CONFIG_FILENAME "/config.tsv"
@@ -190,6 +190,62 @@ float getDimmerStartupVal(int dimmer) {
 }
 
 
+class ConstReader {
+  char _name[128];
+  int _len;
+  int _pos;
+  PGM_P p;
+public:
+  ConstReader(const char *name, PGM_P data, int len)
+  {
+    p = data;
+    strncpy(_name, name, 128);
+    _len = len;
+    _pos = 0;
+  }
+
+  int size() { return _len; }
+  char* name() { return _name; } // use char* or String(x->name()) won't
+                                        // work
+  int available() { return _len - _pos; }
+  int read(uint8_t* obuf, int len) {
+    if (len>available()) len = available();
+    memcpy(obuf, p, len);
+    p += len;
+    return len;
+  }
+
+};
+
+bool spifless_exists(String s_name) {
+  int i=0;
+  const char* name = s_name.c_str();
+  if (name[0]=='/') name++;
+  while(spifless_names[i]) {
+    if (strcmp(name, spifless_names[i]) == 0) {
+      //Serial.printf("exists: [%s]\r\n", name);
+      return true;
+    }
+    i++;
+  }
+  return false;
+}
+
+ConstReader *spifless_open(String s_name)
+{
+  int i=0;
+  const char* name = s_name.c_str();
+  if (name[0]=='/') name++;
+  while(spifless_names[i]) {
+    if (strcmp(name, spifless_names[i]) == 0) {
+      return new ConstReader(name, spifless_datas[i], spifless_lengths[i]);
+    }
+    i++;
+  }
+  return NULL;
+}
+
+
 //format bytes
 String formatBytes(size_t bytes){
   if (bytes < 1024){
@@ -229,12 +285,13 @@ bool handleFileRead(ESP8266WebServer *server, String path){
   if(path.endsWith("/")) path += "index.html";
   String contentType = getContentType(path);
   String pathWithGz = path + ".gz";
-  if(SPIFFS.exists(pathWithGz) || SPIFFS.exists(path)){
-    if(SPIFFS.exists(pathWithGz))
+  if (spifless_exists(pathWithGz) || spifless_exists(path)) {
+    if (spifless_exists(pathWithGz))
       path += ".gz";
-    File file = SPIFFS.open(path, "r");
-    size_t sent = server->streamFile(file, contentType);
-    file.close();
+    ConstReader *file = spifless_open(path);
+    String name = String((char *)file->name());
+    size_t sent = server->streamFile(*file, contentType);
+    delete file;
     return true;
   }
   return false;
