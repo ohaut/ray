@@ -59,6 +59,11 @@ void setup(void){
                         delay(50);
                      }
                    });
+  ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
+    static bool toggle = true;
+    toggle = !toggle;
+    digitalWrite(led_pin, toggle);
+  });
   ArduinoOTA.begin();
 
 #ifdef FAILSAFE_RECOVERY_MODE
