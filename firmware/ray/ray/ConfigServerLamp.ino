@@ -3,7 +3,7 @@
 
 extern ConfigMap configData;
 
-void setupDefaultConfigLight() {
+void setupDefaultConfigLamp() {
   configData.set("startup_val_l0", "0");
   configData.set("startup_val_l1", "0");
   configData.set("startup_val_l2", "0");

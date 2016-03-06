@@ -8,6 +8,7 @@
 
 #include "LEDDimmers.h"
 #include "ConfigMap.h"
+#include "ray_global_defs.h"
 
 int led_pin = 13;
 
@@ -16,6 +17,8 @@ extern ConfigMap configData;
 
 ESP8266WebServer server(80);
 
+
+
 void setupDimmers() {
   float boot_values[3];
   for (int i=0;i<3; i++)
@@ -23,6 +26,8 @@ void setupDimmers() {
   /* switch on leds */
   dimmers.setup(boot_values);
 }
+
+bool wifi_connected;
 
 void setup(void){
 
@@ -42,12 +47,12 @@ void setup(void){
   setupHTTPApi(&server);
 
   /* try to connect to the wifi, otherwise we will have an access point */
-  bool wifi_connected = wifiSetup();
+  wifi_connected = wifiSetup();
 
   /* configure the Over The Air firmware upgrades */
   ArduinoOTA.setHostname(configData["mqtt_id"]);
   ArduinoOTA.onStart([]() { dimmers.halt(); });
-  ArduinoOTA.onError([](ota_error_t error) { dimmers.restart(); }); 
+  ArduinoOTA.onError([](ota_error_t error) { dimmers.restart(); });
   ArduinoOTA.onEnd([](){
                      for (int i=0;i<30;i++){
                         analogWrite(led_pin,(i*100) % 1001);
@@ -64,19 +69,18 @@ void setup(void){
   }
 #endif
 
-  setupMQTTHandling();
-  
-  if (wifi_connected) 
+  if (wifi_connected)
+  {
     digitalWrite(led_pin, HIGH);
+    setupMQTTHandling();
+  }
   
   server.begin();
-
  }
 
 void loop(void){
   ArduinoOTA.handle();
   server.handleClient();
-  MQTTHandle();
-} 
-
-
+  if (wifi_connected)
+     MQTTHandle();
+}

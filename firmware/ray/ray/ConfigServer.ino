@@ -3,6 +3,8 @@
 #include "ConfigMap.h"
 #include <Ticker.h>
 #include <functional>
+#include "ray_global_defs.h"
+#include "consts.h"
 
 ConfigMap configData;
 
@@ -26,15 +28,13 @@ void handleIndex() {
 
 }
 
-void setDefaultConfig();
-
 void setDefaultConfig() {
   char esp_id[32];
 
   // create an unique ID for the AP SSID and MQTT ID
   sprintf(esp_id, "MICRODIMMER_%08x", ESP.getChipId());
-  configData.set("wifi_sta_ap", "nonet");
-  configData.set("wifi_sta_pass", "nonet");
+  configData.set("wifi_sta_ap", DEFAULT_STA_AP);
+  configData.set("wifi_sta_pass", DEFAULT_STA_PASS);
   configData.set("mode", "lamp");
   configData.set("wifi_ap_ssid", esp_id);
   configData.set("wifi_ap_pass", "dimmer123456");
@@ -44,7 +44,7 @@ void setDefaultConfig() {
   configData.set("mqtt_id", esp_id);
 
   // TODO(mangelajo): we could make this a bit modular
-  setupDefaultConfigLight();
+  setupDefaultConfigLamp();
 
 }
 
@@ -189,6 +189,57 @@ float getDimmerStartupVal(int dimmer) {
     else                    return 1.0;
 }
 
+
+//format bytes
+String formatBytes(size_t bytes){
+  if (bytes < 1024){
+    return String(bytes)+"B";
+  } else if(bytes < (1024 * 1024)){
+    return String(bytes/1024.0)+"KB";
+  } else if(bytes < (1024 * 1024 * 1024)){
+    return String(bytes/1024.0/1024.0)+"MB";
+  } else {
+    return String(bytes/1024.0/1024.0/1024.0)+"GB";
+  }
+}
+
+String getContentType(String filename){
+  if(server.hasArg("download")) return "application/octet-stream";
+  else if(filename.endsWith(".htm")) return "text/html";
+  else if(filename.endsWith(".html")) return "text/html";
+  else if(filename.endsWith(".css")) return "text/css";
+  else if(filename.endsWith(".js")) return "application/javascript";
+  else if(filename.endsWith(".png")) return "image/png";
+  else if(filename.endsWith(".gif")) return "image/gif";
+  else if(filename.endsWith(".jpg")) return "image/jpeg";
+  else if(filename.endsWith(".ico")) return "image/x-icon";
+  else if(filename.endsWith(".xml")) return "text/xml";
+  else if(filename.endsWith(".pdf")) return "application/x-pdf";
+  else if(filename.endsWith(".zip")) return "application/x-zip";
+  else if(filename.endsWith(".gz")) return "application/x-gzip";
+  return "text/plain";
+}
+
+bool handleFileRead(ESP8266WebServer *server, String path){
+  if (path.endsWith("config.tsv"))
+  {
+    server->send(403, "text/plain", "Unauthorized");
+    return false;
+  }
+  if(path.endsWith("/")) path += "index.html";
+  String contentType = getContentType(path);
+  String pathWithGz = path + ".gz";
+  if(SPIFFS.exists(pathWithGz) || SPIFFS.exists(path)){
+    if(SPIFFS.exists(pathWithGz))
+      path += ".gz";
+    File file = SPIFFS.open(path, "r");
+    size_t sent = server->streamFile(file, contentType);
+    file.close();
+    return true;
+  }
+  return false;
+}
+
 void configServerSetup(ESP8266WebServer *server) {
   _server = server;
   configSetup();
@@ -199,5 +250,9 @@ void configServerSetup(ESP8266WebServer *server) {
   server->on("/config/lamp/", HTTP_GET,  handleConfigLamp);
   server->on("/config/lamp/", HTTP_POST,  handleConfigLampPost);
 
+  // static file serving
+  server->onNotFound([server](){
+     if(!handleFileRead(server, server->uri()))
+    server->send(404, "text/plain", "FileNotFound");
+   });
 }
-

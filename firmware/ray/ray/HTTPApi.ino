@@ -1,3 +1,4 @@
+#include "ray_global_defs.h"
 
 void handleSetLed() {
 
@@ -37,5 +38,3 @@ void handleSetLed() {
 void setupHTTPApi(ESP8266WebServer *server) {
   server->on("/setLed", HTTP_GET,  handleSetLed);
 }
-
-
