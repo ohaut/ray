@@ -188,7 +188,8 @@ float getDimmerStartupVal(int dimmer) {
     if (val && strlen(val)) return atoi(val)/100.0;
     else                    return 1.0;
 }
-
+/*
+int32_t spiffs_hal_read(uint32_t addr, uint32_t size, uint8_t *dst);
 
 class ConstReader {
   char _name[128];
@@ -202,6 +203,7 @@ public:
     strncpy(_name, name, 128);
     _len = len;
     _pos = 0;
+    Serial.printf(">>0x%x\r\n", data);
   }
 
   int size() { return _len; }
@@ -210,7 +212,10 @@ public:
   int available() { return _len - _pos; }
   int read(uint8_t* obuf, int len) {
     if (len>available()) len = available();
-    memcpy(obuf, p, len);
+    //memcpy(obuf, p, len);
+    //spiffs_hal_read(((uint32_t)p)-0x40200000, len, obuf);
+    ESP.flashRead(((uint32_t)p)-0x40200000, (uint32_t*)obuf, len);
+    //spiffs_hal_read(((uint32_t)p)-0x40200000, len, obuf);
     p += len;
     return len;
   }
@@ -244,6 +249,7 @@ ConstReader *spifless_open(String s_name)
   }
   return NULL;
 }
+*/
 
 
 //format bytes
@@ -285,13 +291,25 @@ bool handleFileRead(ESP8266WebServer *server, String path){
   if(path.endsWith("/")) path += "index.html";
   String contentType = getContentType(path);
   String pathWithGz = path + ".gz";
+#ifndef SPIFLESS
+  if(SPIFFS.exists(pathWithGz) || SPIFFS.exists(path)){
+    if(SPIFFS.exists(pathWithGz))
+#else
   if (spifless_exists(pathWithGz) || spifless_exists(path)) {
     if (spifless_exists(pathWithGz))
+#endif
       path += ".gz";
+
+#ifndef SPIFLESS
+    File file = SPIFFS.open(path, "r");
+    size_t sent = server->streamFile(file, contentType);
+    file.close();
+#else
     ConstReader *file = spifless_open(path);
-    String name = String((char *)file->name());
+
     size_t sent = server->streamFile(*file, contentType);
     delete file;
+#endif
     return true;
   }
   return false;
