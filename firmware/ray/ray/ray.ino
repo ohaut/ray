@@ -5,6 +5,9 @@
 #include "PubSubClient.h"
 #include <Ticker.h>
 #include <ESP8266WebServer.h>
+#include <ESP8266HTTPClient.h>
+#include <ESP8266httpUpdate.h>
+
 
 #include "LEDDimmers.h"
 #include "ConfigMap.h"
@@ -79,7 +82,7 @@ void setup(void){
     digitalWrite(led_pin, HIGH);
     setupMQTTHandling();
   }
-  
+
   server.begin();
  }
 

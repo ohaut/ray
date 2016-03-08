@@ -5,10 +5,11 @@
 #include <functional>
 #include "ray_global_defs.h"
 #include "consts.h"
-#include "../data.h"
+#ifdef SPIFFLESS
+  #include "../data.h"
+#endif
 ConfigMap configData;
 
-#define CONFIG_FILENAME "/config.tsv"
 
 ESP8266WebServer* _server;
 
@@ -283,11 +284,11 @@ String getContentType(String filename){
 }
 
 bool handleFileRead(ESP8266WebServer *server, String path){
-  if (path.endsWith("config.tsv"))
+  /*if (path.endsWith("config.tsv"))
   {
     server->send(403, "text/plain", "Unauthorized");
     return false;
-  }
+  }*/
   if(path.endsWith("/")) path += "index.html";
   String contentType = getContentType(path);
   String pathWithGz = path + ".gz";
