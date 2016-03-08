@@ -1,5 +1,3 @@
 version,firmware,filesystem,commitid
-0.10A,firmware-000000.bin,spiffs-000000.bin,7a7ea6d
-
-000002,firmware-000002.bin,spiffs-000002.bin,f7b3cd3
-000002,firmware-000002.bin,spiffs-000002.bin,c25fec8
+000000,firmware-000000.bin,spiffs-000000.bin,7a7ea6d
+000002,firmware-000002.bin,spiffs-000002.bin,b2a3f0d
