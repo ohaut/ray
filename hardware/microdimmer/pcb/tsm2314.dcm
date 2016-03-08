@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP TSM2314
-D 100V Vds, 33A Id, HEXFET N-Channel MOSFET, TO-220
-K HEXFET N-Channel MOSFET
-F http://www.irf.com/product-info/datasheets/data/irf540n.pdf
-$ENDCMP
-#
-#End Doc Library
