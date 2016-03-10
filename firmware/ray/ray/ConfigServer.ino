@@ -151,7 +151,7 @@ void handlePost(std::function<void()> render_form_function) {
    * urldecode it, and set it back to the config object.
    */
   configData.foreach(
-      [](const char* key, const char* value) {
+      [](const char* key, const char* value, bool last) {
         const char *_str = _server->arg(key).c_str();
         if (_str) {
           char *str = strdup(_str);
@@ -189,7 +189,7 @@ float getDimmerStartupVal(int dimmer) {
     if (val && strlen(val)) return atoi(val)/100.0;
     else                    return 1.0;
 }
-/*
+#ifdef SPIFLESS
 int32_t spiffs_hal_read(uint32_t addr, uint32_t size, uint8_t *dst);
 
 class ConstReader {
@@ -250,7 +250,7 @@ ConstReader *spifless_open(String s_name)
   }
   return NULL;
 }
-*/
+#endif
 
 
 //format bytes
@@ -316,15 +316,41 @@ bool handleFileRead(ESP8266WebServer *server, String path){
   return false;
 }
 
+void handleConfigGet() {
+  String json = "{";
+  configData.foreach([&json](const char* key, const char* value, bool last) {
+    json += "\"";
+    json += key;
+    json += "\": \"";
+    json += value;
+    json += "\"";
+    if (!last) json += ",\n ";
+  });
+  json += "}";
+  _server->send(200, "text/html", json);
+}
+
+void handleReboot() {
+  _server->send(200, "text/html", "{\"result\": \"0\","
+                                   "\"message\": \"rebooting\"}");
+  /* allow for the data to be sent back to browser */
+  delay(1000);
+  ESP.restart();
+}
+
+
 void configServerSetup(ESP8266WebServer *server) {
   _server = server;
   configSetup();
 
-  server->on("/", HTTP_GET, handleIndex);
-  server->on("/config/connection/", HTTP_GET,  handleConfig);
-  server->on("/config/connection/", HTTP_POST,  handleConfigPost);
-  server->on("/config/lamp/", HTTP_GET,  handleConfigLamp);
-  server->on("/config/lamp/", HTTP_POST,  handleConfigLampPost);
+  server->on("/", HTTP_GET, [server](){
+    if(!handleFileRead(server, "/index.html")) {
+      handleIndex();
+    };
+  });
+  server->on("/config", HTTP_GET, handleConfigGet);
+  server->on("/config", HTTP_POST, handleConfigPost);
+  server->on("/reboot", HTTP_GET, handleReboot);
 
   // static file serving
   server->onNotFound([server](){

@@ -26,7 +26,7 @@ class ConfigEntry {
   }
 };
 
-#define FOREACH_CALLBACK std::function<void(const char*, const char *)>
+#define FOREACH_CALLBACK std::function<void(const char*, const char *, bool last)>
 
 class ConfigMap {
   ConfigEntry *entry_list;
@@ -47,14 +47,14 @@ class ConfigMap {
   void foreach(FOREACH_CALLBACK callback) {
     ConfigEntry *p = entry_list;
     while(p) {
-      callback(p->key, p->value);
+      callback(p->key, p->value, p->next == NULL);
       p = p->next;
     }
   }
 
   void replaceVars(String& form) {
       foreach(
-      [&form](const char* key, const char* value) {
+      [&form](const char* key, const char* value, bool last) {
           String var_name = "$";
           var_name += key;
           form.replace(var_name, (char*)value);
@@ -64,7 +64,7 @@ class ConfigMap {
   void writeTSV(const char *filename) {
     File configFile = SPIFFS.open(filename, "w");
     foreach(
-      [&configFile](const char* key, const char* value) {
+      [&configFile](const char* key, const char* value, bool last) {
         String str = key;
         str += '\t';
         str += value;
@@ -122,4 +122,3 @@ class ConfigMap {
 
 };
 #endif
-

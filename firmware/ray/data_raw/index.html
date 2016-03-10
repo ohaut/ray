@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>OHAUT: RAY Led Dimmer</title>
+
+    <!-- Bootstrap -->
+    <link href="css/all.css" rel="stylesheet">
+    <!--<link href="css/dashboard.css" rel="stylesheet">-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><!--<img src="img/ohaut.jpg"/>-->RAY lightbulb</a>
+        </div>
+        <div id="navbarup" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://github.com/ohaut/ray">source code</a></li>
+            <li><a href="http://ohaut.org">ohaut.org</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="navbar" class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar" role="tablist">
+            <li class="active"><a  data-toggle="tab" href="#wifi">WiFi</a></li>
+            <li><a data-toggle="tab" href="#mqtt" aria-controls="mqtt">MQTT</a></li>
+            <li><a data-toggle="tab" href="#lamp" aria-controls="lamp">Lamp</a></li>
+            <li><a data-toggle="tab" href="#greenhouse" aria-controls="greenhouse">Greenhouse</a></li>
+            <li><a data-toggle="tab" href="#updates" aria-controls="updates">Updates</a></li>
+          </ul>
+        </div>
+
+        <div id="main" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <form action="/config" method="POST" class="form-horizontal">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="wifi">
+                <h1 class="page-header">WiFi settings</h1>
+                <h3>WiFi Station settings</h3>
+                <div class="form-group">
+                    <label for="wifi_sta_ap" class="col-sm-3 control-label">WiFi SSID</label>
+                      <div class="col-sm-7">
+                          <input class="form-control" name="wifi_sta_ap" value=''>
+                      </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="wifi_sta_pass" class="col-sm-3 control-label">WiFi password</label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" name="wifi_sta_pass" value=''>
+                    </div>
+                </div>
+
+
+                <h3>WiFi AP (fallback config)</h3>
+                <div class="form-group">
+                    <label for="wifi_ap_ssid" class="col-sm-3 control-label">WiFi AP SSID</label>
+                    <div class="col-sm-7">
+                      <input class="form-control" name="wifi_ap_ssid" value=''>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="wifi_ap_pass"  class="col-sm-3 control-label">WiFi AP password</label>
+                    <div class="col-sm-7">
+                      <input type="password" class="form-control" name="wifi_ap_pass" value=''>
+                    </div>
+                </div>
+
+                <input type="submit" value="Save">
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="mqtt">
+                <h1 class="page-header">MQTT settings</h1>
+
+                <div class="form-group">
+                    <label for="mqtt_server" class="col-sm-3 control-label">MQTT Server</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" name="mqtt_server" value=''>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mqtt_path" class="col-sm-3 control-label">MQTT (in) path</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" name="mqtt_path" value=''>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mqtt_id" class="col-sm-3 control-label">MQTT Device ID</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" name="mqtt_id" value=''>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mqtt_out_path" class="col-sm-3 control-label">MQTT (out) path</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" name="mqtt_out_path" value=''>
+                    </div>
+                </div>
+                <input type="submit" value="Save">
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="updates">
+                <h1 class="page-header">Firmware Update</h1>
+                <div class"col-sm-8">
+                  FW: <span id="firmware_version"></span>
+                  SPIFFS: <span id="spiffs_version"></span>
+                </div>
+
+                <h2>Latest server version</h2>
+                <div class="col-sm-8">
+
+                  <div id="newer_version" style="display: none" class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">There's a newer version, feel free to update.</h3>
+                    </div>
+                    <div class="panel-body">
+                      (<span class="server_version">...</span>)
+                      <br/> Please be patient when you do it <br/>
+                      <a href="/update/all" class="btn btn-info" role="button">Update</a>
+                    </div>
+                  </div>
+
+                  <div id="up_to_date" style="display: none" class="panel panel-success">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Your firmware is up to date.</h3>
+                    </div>
+                    <div class="panel-body">
+                      (<span class="server_version">...</span>)
+                    </div>
+                  </div>
+
+                </div>
+
+            </div>
+
+          </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery_1_11_3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+
+
+      $.ajax({
+          url: "/config",
+          dataType: "json",
+          jsonp: false,
+          success: function( data ) {
+              for (var key in data) {
+                $('#main').find('input[name="'+key+'"]').val(data[key]);
+              }
+          }
+        });
+
+
+        function check_latest_version(my_version, my_spiffs_version,
+                                      commit_id) {
+          $.ajax({
+            url: "http://ohaut.org/ray/firmware/master/firmware.csv",
+            success: function(csv) {
+                arrayOfLines = csv.match(/[^\r\n]+/g);
+                latest_version = "0";
+                for (var line in arrayOfLines) {
+                  values = arrayOfLines[line].split(',');
+                  version = values[0];
+                  commit_id = values[3];
+                  if (version > latest_version) {
+                    latest_version = version;
+                    latest_commit = commit_id;
+                  }
+                  latest_version = version;
+                  firmware_file = values[1];
+                  filesystem_file = values[2];
+                }
+
+                $("span.server_version").html(
+                  "<a href=\"https://github.com/ohaut/ray/commit/" +
+                  commit_id +"\">" + latest_version + "</a>");
+
+                if ((latest_version > my_version) ||
+                    (latest_version > my_spiffs_version))  {
+                  $("#newer_version").show();
+                } else {
+                  $("#up_to_date").show();
+                }
+
+
+            }
+          });
+        }
+        $.ajax({
+            url: "/update/status",
+            dataType: "json",
+            jsonp: false,
+            success: function( data ) {
+                for (var key in data) {
+                  $('#'+key).html(data[key]);
+                }
+                check_latest_version(data['firmware_version'],
+                                     data['spiffs_version']);
+
+            }
+          });
+
+
+    </script>
+  </body>
+</html>

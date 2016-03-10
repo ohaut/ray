@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-VERSION=$(python -c "print open('data/VERSION_H', 'rb').read().split('\"')[1]")
+VERSION=$(python -c "print open('data_raw/VERSION_H', 'rb').read().split('\"')[1]")
 COMMIT_ID=$(git rev-parse --short HEAD)
 
 
@@ -25,6 +25,7 @@ git checkout master
 
 platformio run
 mv .pioenvs/esp12e/firmware.bin .pioenvs/esp12e/firmware-$VERSION.bin
+./tools/prep_data.sh
 ~/.platformio/packages/tool-mkspiffs/mkspiffs -c data -p 256 -b 8192 \
                         -s 1028096 .pioenvs/esp12e/spiffs-$VERSION.bin
 

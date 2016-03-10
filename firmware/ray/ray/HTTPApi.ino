@@ -66,6 +66,7 @@ String getSPIFFSversion() {
       if (((char)val == '"') && waiting_first_comma) {
         reading_version = true;
         waiting_first_comma = false;
+        continue;
       }
       if (reading_version) {
         result += (char) val;
@@ -86,6 +87,7 @@ void handleGetUpdateStatus()
                   "\"firmware_version\": \"%s\", "
                   "\"spiffs_version\": \"%s\"}",
           update_status, VERSION, spiffs_version.c_str());
+
   server.send(200, "application/json", result);
 }
 
@@ -115,9 +117,36 @@ void handleUpdateFirmware() {
   Serial.printf("Updating Firrmware done: %d", update_status);
 }
 
+void handleUpdateAll() {
+  Serial.println("Updating ALL:");
+  server.send(200, "application/json", "{\"result\": \"0\", \"message:\": "
+                                          "\"SPIFFS updating, please wait\"}");
+
+  Serial.println(" * SPIFFS from HTTP");
+
+  update_status = 1;
+  t_httpUpdate_return ret = ESPhttpUpdate.updateSpiffs(
+    "http://ohaut.org/ray/firmware/master/spiffs.bin");
+  if (ret == HTTP_UPDATE_OK) update_status = 2;
+  else update_status = -1;
+  configData.writeTSV(CONFIG_FILENAME);
+
+  update_status = 1;
+
+  Serial.println(" * Firmware from HTTP");
+
+  ret = ESPhttpUpdate.update(
+    "http://ohaut.org/ray/firmware/master/firmware.bin");
+  if (ret == HTTP_UPDATE_OK) update_status = 3;
+  else update_status = -1;
+  Serial.printf("Updating Firrmware done: %d", update_status);
+
+}
+
 void setupHTTPApi(ESP8266WebServer *server) {
   server->on("/setLed", HTTP_GET,  handleSetLed);
   server->on("/update/status", HTTP_GET,  handleGetUpdateStatus);
   server->on("/update/spiffs", HTTP_GET,  handleUpdateSPIFFS);
   server->on("/update/firmware", HTTP_GET,  handleUpdateFirmware);
+  server->on("/update/all", HTTP_GET,  handleUpdateAll);
 }
