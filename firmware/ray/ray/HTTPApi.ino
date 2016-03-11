@@ -120,7 +120,7 @@ void handleUpdateFirmware() {
 void handleUpdateAll() {
   Serial.println("Updating ALL:");
   server.send(200, "application/json", "{\"result\": \"0\", \"message:\": "
-                                          "\"SPIFFS updating, please wait\"}");
+                                          "\"Updating everything, please wait\"}");
 
   Serial.println(" * SPIFFS from HTTP");
 
@@ -131,6 +131,7 @@ void handleUpdateAll() {
   else update_status = -1;
   configData.writeTSV(CONFIG_FILENAME);
 
+  if (update_status<0) return;
   update_status = 1;
 
   Serial.println(" * Firmware from HTTP");
