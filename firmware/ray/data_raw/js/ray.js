@@ -32,7 +32,7 @@ function check_for_updates() {
 
         $("span.server_version").html(
           "<a href=\"https://github.com/ohaut/ray/commit/" +
-          commit_id +"\">" + latest_version + "</a>");
+          commit_id +"\" target=\"_blank\">" + latest_version + "</a>");
 
         if ((latest_version > my_version) ||
             (latest_version > my_spiffs_version))  {
@@ -58,6 +58,58 @@ function check_for_updates() {
                                            data['spiffs_version']);
                     }});
 }
+
+var update_check_timer;
+var current_try;
+var max_update_check_tries;
+
+function check_update_finished() {
+
+  console.log("Checking update status, try counter: "+ current_try);
+
+  $.ajax({url: "/update/status",
+          dataType: "json",
+          jsonp: false,
+          success: function(data) {
+            $("#updateModal").modal("hide");
+            clearInterval(update_check_timer);
+            console.log("Finished updating firmware");
+            location.reload();
+
+          }})
+
+  current_try++;
+
+  if (current_try > max_update_check_tries)  {
+    $("#updateModal").modal("hide");
+    clearInterval(update_check_timer);
+    location.reload();
+  }
+
+  value=(current_try * 100)/max_update_check_tries;
+  $('#update_progress').css('width', value+'%').attr('aria-valuenow', value);
+}
+
+function start_update_check_timer() {
+  update_check_timer = setInterval(check_update_finished, 5000);
+  max_update_check_tries = (60*4)/5; /* 4 minutes max */
+  current_try = 0;
+}
+
+// HTML onclick handlers
+function start_firmware_update() {
+  $.ajax({url: "/update/all",
+          success: function( data ) {
+            $("#updateModal").modal("show");
+            start_update_check_timer();
+
+          }
+
+        })
+
+}
+
+
 
 $(function() {
   load_config();
