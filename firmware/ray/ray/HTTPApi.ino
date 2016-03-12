@@ -147,7 +147,7 @@ void handleUpdateAll() {
     "http://ohaut.org/ray/firmware/master/firmware.bin");
   if (ret == HTTP_UPDATE_OK) update_status = 3;
   else update_status = -1;
-  Serial.printf("Updating Firrmware done: %d", update_status);
+  Serial.printf("Updating Firmware done: %d", update_status);
   server.begin();
 }
 

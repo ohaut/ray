@@ -78,9 +78,7 @@ function check_update_finished() {
 
           }})
 
-  current_try++;
-
-  if (current_try > max_update_check_tries)  {
+  if (current_try++ > max_update_check_tries)  {
     $("#updateModal").modal("hide");
     clearInterval(update_check_timer);
     location.reload();
@@ -96,20 +94,16 @@ function start_update_check_timer() {
   current_try = 0;
 }
 
-// HTML onclick handlers
+// HTML onclick handlers //////////////////////////////////////////////////////
 function start_firmware_update() {
   $.ajax({url: "/update/all",
           success: function( data ) {
             $("#updateModal").modal("show");
             start_update_check_timer();
-
-          }
-
-        })
-
+          }})
 }
 
-
+// MAIN ///////////////////////////////////////////////////////////////////////
 
 $(function() {
   load_config();
