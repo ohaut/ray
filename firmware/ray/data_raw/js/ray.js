@@ -101,6 +101,7 @@ function start_firmware_update() {
             $("#updateModal").modal("show");
             start_update_check_timer();
           }})
+  return false;
 }
 
 // MAIN ///////////////////////////////////////////////////////////////////////
