@@ -4,3 +4,4 @@ version,firmware,filesystem,commitid
 000003,firmware-000003.bin,spiffs-000003.bin,9aa7408
 000004,firmware-000004.bin,spiffs-000004.bin,54cb528
 000005,firmware-000005.bin,spiffs-000005.bin,1328fb4
+000006,firmware-000006.bin,spiffs-000006.bin,e573eb0
