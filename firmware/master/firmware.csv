@@ -7,3 +7,4 @@ version,firmware,filesystem,commitid
 000006,firmware-000006.bin,spiffs-000006.bin,e573eb0
 000007,firmware-000007.bin,spiffs-000007.bin,6e9b324
 000008,firmware-000008.bin,spiffs-000008.bin,140c1e3
+000009,firmware-000009.bin,spiffs-000009.bin,7bc66e6
