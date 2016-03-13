@@ -9,3 +9,4 @@ version,firmware,filesystem,commitid
 000008,firmware-000008.bin,spiffs-000008.bin,140c1e3
 000009,firmware-000009.bin,spiffs-000009.bin,7bc66e6
 000010,firmware-000010.bin,app.html-000010.gz,a754cdf
+000011,firmware-000011.bin,app.html-000011.gz,c9fbd5b
