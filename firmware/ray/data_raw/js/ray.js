@@ -34,8 +34,7 @@ function check_for_updates() {
           "<a href=\"https://github.com/ohaut/ray/commit/" +
           commit_id +"\" target=\"_blank\">" + latest_version + "</a>");
 
-        if ((latest_version > my_version) ||
-            (latest_version > my_spiffs_version))  {
+        if (latest_version > my_version)  {
           $("#newer_version").show();
         } else {
           $("#up_to_date").show();
