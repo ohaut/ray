@@ -344,7 +344,7 @@ void configServerSetup(ESP8266WebServer *server) {
   configSetup();
 
   server->on("/", HTTP_GET, [server](){
-    if(!handleFileRead(server, "/index.html")) {
+    if(!handleFileRead(server, "/app.html")) {
       handleIndex();
     };
   });

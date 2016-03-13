@@ -26,23 +26,21 @@ git checkout master
 platformio run
 mv .pioenvs/esp12e/firmware.bin .pioenvs/esp12e/firmware-$VERSION.bin
 ./tools/prep_data.sh
-~/.platformio/packages/tool-mkspiffs/mkspiffs -c data -p 256 -b 8192 \
-                        -s 1028096 .pioenvs/esp12e/spiffs-$VERSION.bin
 
 git checkout origin/gh-pages -B gh-pages
 
 
 cp -v .pioenvs/esp12e/firmware-$VERSION.bin ../master
-cp -v .pioenvs/esp12e/spiffs-$VERSION.bin ../master
+cp -v data/app.html.gz ../master/app.html-$VERSION.gz
 rm -f ../master/firmware.bin
-rm -f ../master/spiffs.bin
+rm -f ../master/app.html.gz
 ln -s ../master/firmware-$VERSION.bin ../master/firmware.bin
-ln -s ../master/spiffs-$VERSION.bin ../master/spiffs.bin
-echo $VERSION,firmware-$VERSION.bin,spiffs-$VERSION.bin,$COMMIT_ID \
+ln -s ../master/app.html-$VERSION.gz ../master/app.html.gz
+echo $VERSION,firmware-$VERSION.bin,app.html-$VERSION.gz,$COMMIT_ID \
     >> ../master/firmware.csv
 
 git add ../master/firmware*
-git add ../master/spiffs*
+git add ../master/app*
 
 git commit -a -m "Updated to version $VERSION, from source commit $COMMIT_ID"
 git push

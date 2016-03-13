@@ -10,8 +10,8 @@ cd data_raw
 
 # make an inlined version of index.html to avoid multiple requests
 # at load
-inliner -m index.html >../data/index.html
-gzip -9 ../data/index.html
+inliner -m index.html >../data/app.html
+gzip -9 ../data/app.html
 
 # link version and remove usless data in the directory
 cd ../data

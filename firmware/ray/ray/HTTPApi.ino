@@ -1,5 +1,6 @@
 #include <ESP8266HTTPClient.h>
 #include <ESP8266httpUpdate.h>
+#include <ESP8266WiFi.h>
 
 #include "ConfigMap.h"
 #include "version.h"
@@ -91,6 +92,51 @@ void handleGetUpdateStatus()
   server.send(200, "application/json", result);
 }
 
+
+
+void handleUpdateAppHtmlGz() {
+  const char *url = NULL;
+  int len;
+  Serial.println("Updating app.html.gz");
+
+  server.send(200,"application/json", "{\"result\": \"0\", \"message:\": "
+                                          "\"app.html.gz updating, please wait\"}");
+  server.stop();
+
+  if (!url)
+    url = "http://ohaut.org/ray/firmware/master/app.html.gz";
+
+  HTTPClient http;
+  http.begin(url);
+
+  int httpCode = http.GET();
+
+  if(httpCode == HTTP_CODE_OK) {
+    len = http.getSize();
+    uint8_t buf[256];
+    WiFiClient* stream = http.getStreamPtr();
+    File appFile = SPIFFS.open("app.html.gz_", "w");
+    while(http.connected() && len>0) {
+      size_t to_read = stream->available();
+      if (to_read) {
+        if (to_read>sizeof(buf)) to_read = sizeof(buf);
+        int bytes = stream->readBytes(buf, to_read);
+        appFile.write(buf, bytes);
+        len -= bytes;
+      }
+    }
+    appFile.close();
+  }
+
+
+  server.begin();
+  if (len <= 0) {
+    SPIFFS.remove("app.html.gz");
+    SPIFFS.rename("app.html.gz_", "app.html.gz");
+    update_status = 2;
+  } else update_status = -1;
+}
+
 void handleUpdateSPIFFS() {
   Serial.println("Updating SPIFFS from HTTP");
   server.send(200, "application/json", "{\"result\": \"0\", \"message:\": "
@@ -156,5 +202,6 @@ void setupHTTPApi(ESP8266WebServer *server) {
   server->on("/update/status", HTTP_GET,  handleGetUpdateStatus);
   server->on("/update/spiffs", HTTP_GET,  handleUpdateSPIFFS);
   server->on("/update/firmware", HTTP_GET,  handleUpdateFirmware);
+  server->on("/update/app", HTTP_GET, handleUpdateAppHtmlGz);
   server->on("/update/all", HTTP_GET,  handleUpdateAll);
 }
