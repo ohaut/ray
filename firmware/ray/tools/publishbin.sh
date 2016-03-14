@@ -37,14 +37,14 @@ fi
 git checkout origin/gh-pages -B gh-pages
 
 if [ $LAST_VERSION == $VERSION ] && \
-    ! cmp .pioenvs/esp12e/firmware.bin ../master/firmware-$VERSION.bin; then
+    ! cmp .pioenvs/esp12e/firmware.bin ../master/firmware-$LAST_VERSION.bin; then
    echo "You should have bumped your version.h because your firmware changed"
    git checkout master
    exit 1
 fi
 
 gzip -d -c -k data/app.html.gz > /tmp/app.html.1
-gzip -d -c -k ../master/app.html-$VERSION_JS.gz > /tmp/app.html.2
+gzip -d -c -k ../master/app.html-$LAST_VERSION_JS.gz > /tmp/app.html.2
 
 if [ $LAST_VERSION_JS == $VERSION_JS ] && \
     ! cmp /tmp/app.html.1 /tmp/app.html.2 ; then
