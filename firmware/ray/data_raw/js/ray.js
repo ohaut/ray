@@ -13,28 +13,36 @@ function load_config()
 }
 
 function check_for_updates() {
-  function check_latest_version(my_version, my_spiffs_version, commit_id) {
+  function check_latest_version(my_version, my_app_version, commit_id) {
     function parse_csv_and_check(csv) {
         arrayOfLines = csv.match(/[^\r\n]+/g);
         latest_version = "0";
+        latest_app_version = "0";
         arrayOfLines.shift(); // remove the description line
         for (var line in arrayOfLines) {
           values = arrayOfLines[line].split(',');
           version = values[0];
-          commit_id = values[3];
           firmware_file = values[1];
-          filesystem_file = values[2];
+          srv_app_version = values[2];
+          app_file = values[3];
+          commit_id = values[4];
           if (version > latest_version) {
             latest_version = version;
+            latest_commit = commit_id;
+          }
+          if (srv_app_version > latest_app_version ) {
+            latest_app_version = srv_app_version;
             latest_commit = commit_id;
           }
         }
 
         $("span.server_version").html(
           "<a href=\"https://github.com/ohaut/ray/commit/" +
-          commit_id +"\" target=\"_blank\">" + latest_version + "</a>");
+          commit_id +"\" target=\"_blank\">FW:" + latest_version + " HTML:" +
+          latest_app_version + "</a>");
 
-        if (latest_version > my_version)  {
+        if ((latest_version > my_version) ||
+            (latest_app_version > my_app_version))  {
           $("#newer_version").show();
         } else {
           $("#up_to_date").show();
@@ -53,8 +61,7 @@ function check_for_updates() {
           success: function( data ) {
                       for (var key in data)
                         $('#'+key).html(data[key]);
-                      check_latest_version(data['firmware_version'],
-                                           data['spiffs_version']);
+                      check_latest_version(data['firmware_version'], app_version);
                     }});
 }
 

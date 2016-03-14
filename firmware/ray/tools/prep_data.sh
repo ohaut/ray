@@ -16,4 +16,3 @@ gzip -9 ../data/app.html
 # link version and remove usless data in the directory
 cd ../data
 rm -rf .DS*
-ln -s ../ray/version.h VERSION_H

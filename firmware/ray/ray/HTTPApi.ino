@@ -136,13 +136,14 @@ bool downloadAppHtmlGz(const char* url=NULL) {
     }
     else
     {
-      return false;
       Serial.println("Error");
+      server.begin();
+      return false;
     }
 
     Serial.println("Done");
-
     server.begin();
+    
     if (len <= 0) {
       SPIFFS.remove("/app.html.gz");
       SPIFFS.rename("/app.html.gz_", "/app.html.gz");
