@@ -118,7 +118,6 @@ bool downloadAppHtmlGz(const char* url=NULL) {
 
       if (!appFile) {
         Serial.println("Error opening file for write");
-        server.begin();
         return false;
       }
 
@@ -137,13 +136,11 @@ bool downloadAppHtmlGz(const char* url=NULL) {
     else
     {
       Serial.println("Error");
-      server.begin();
       return false;
     }
 
     Serial.println("Done");
-    server.begin();
-    
+
     if (len <= 0) {
       SPIFFS.remove("/app.html.gz");
       SPIFFS.rename("/app.html.gz_", "/app.html.gz");
@@ -164,6 +161,8 @@ void handleUpdateAppHtmlGz() {
     update_status = 2;
   else
     update_status = -1;
+
+  server.begin();
 
 }
 

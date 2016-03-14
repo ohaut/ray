@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+set -x
 VERSION=$(python -c "print open('ray/version.h', 'rb').read().split('\"')[1]")
 VERSION_JS=$(python -c "print open('data_raw/js/version.js', 'rb').read().split('\"')[1]")
 COMMIT_ID=$(git rev-parse --short HEAD)
@@ -42,8 +43,8 @@ if [ $LAST_VERSION == $VERSION ] && \
    exit 1
 fi
 
-gzip -d -k data/app.html.gz > /tmp/app.html.1
-gzip -d -k ../master/app.html-$VERSION_JS.gz > /tmp/app.html.2
+gzip -d -c -k data/app.html.gz > /tmp/app.html.1
+gzip -d -c -k ../master/app.html-$VERSION_JS.gz > /tmp/app.html.2
 
 if [ $LAST_VERSION_JS == $VERSION_JS ] && \
     ! cmp /tmp/app.html.1 /tmp/app.html.2 ; then
@@ -56,8 +57,8 @@ rm /tmp/app.html.[12]
 
 
 
-cp -vf .pioenvs/esp12e/firmware.bin ../master/firmware-$VERSION.bin
-cp -vf data/app.html.gz ../master/app.html-$VERSION_JS.gz
+cp -f .pioenvs/esp12e/firmware.bin ../master/firmware-$VERSION.bin
+cp -f data/app.html.gz ../master/app.html-$VERSION_JS.gz
 rm -f ../master/firmware.bin
 rm -f ../master/app.html.gz
 ln -s ../master/firmware-$VERSION.bin ../master/firmware.bin
