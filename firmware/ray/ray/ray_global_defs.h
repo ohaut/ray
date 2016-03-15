@@ -18,5 +18,6 @@ void setDefaultConfig();
 void setupDefaultConfigLamp();
 void handleConfigLamp();
 void handleConfigLampPost();
+bool handleFileRead(ESP8266WebServer *server, String path);
 
 #endif

@@ -222,6 +222,10 @@ void handleUpdateAll() {
   server.begin();
 }
 
+//TODO(mangelajo): Add API to scan networks
+// https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WiFi/examples/WiFiScan/WiFiScan.ino
+
+
 void setupHTTPApi(ESP8266WebServer *server) {
   server->on("/setLed", HTTP_GET,  handleSetLed);
   server->on("/update/status", HTTP_GET,  handleGetUpdateStatus);

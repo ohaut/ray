@@ -1,15 +1,23 @@
 function load_config()
 {
   $.ajax({
-    url: "/config",
+    url: "/config.json",
     dataType: "json",
     jsonp: false,
     success: function( data ) {
         for (var key in data) {
           $('#main').find('input[name="'+key+'"]').val(data[key]);
         }
+        $("#startupModal").modal("hide");
+        $("#startupModal").css("display", "none");
     }
   });
+
+  $("#config-form").ajaxForm({url: "/config.json", type:"post",
+                              success: function () {
+                                alert("config saved, rebooting");
+                                location.reload();
+                              }});
 }
 
 function check_for_updates() {

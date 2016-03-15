@@ -14,7 +14,7 @@
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
     <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
- 
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,7 +23,8 @@
     <![endif]-->
   </head>
   <body>
-
+    <!-- this is the html/app version -->
+    <script src="js/version.js"></script>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -51,16 +52,38 @@
             <li class="active"><a  data-toggle="tab" href="#wifi">WiFi</a></li>
             <li><a data-toggle="tab" href="#mqtt" aria-controls="mqtt">MQTT</a></li>
             <li><a data-toggle="tab" href="#lamp" aria-controls="lamp">Lamp</a></li>
-            <li><a data-toggle="tab" href="#greenhouse" aria-controls="greenhouse">Greenhouse</a></li>
+          <!--  <li><a data-toggle="tab" href="#greenhouse" aria-controls="greenhouse">Greenhouse</a></li> -->
             <li><a data-toggle="tab" href="#updates" aria-controls="updates">Updates</a></li>
           </ul>
         </div>
 
 
         <div id="main" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <form action="/config" method="POST" class="form-horizontal">
+          <form id="config-form" action="/config" method="POST" class="form-horizontal">
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="wifi">
+
+              <!-- Modal Message showed at start until we fetch config -->
+              <div id="startupModal" class="modal fade in" data-backdrop="static" data-keyboard="false" style="display:block;">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Grabbing configuration from device</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-sm-1" style="padding-right:60px; padding-top:15px"><img src="images/hourglass.svg" style="border-right:1em;"/></div>
+                      <div>
+                        <p>Please wait until this dialog
+                        closes automatically, we're waiting for configuration
+                        details from the device ...</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
                 <h1 class="page-header">WiFi settings</h1>
                 <h3>WiFi Station settings</h3>
                 <div class="form-group">
@@ -129,11 +152,35 @@
                 <input type="submit" value="Save">
             </div>
 
+            <div role="tabpanel" class="tab-pane fade" id="lamp">
+              <h1>Lamp startup settings (0-100 or empty to get it from net)</h1>
+              <div class="form-group">
+                  <label for="startup_val_l0" class="col-sm-3 control-label">Channel 0</label>
+                  <div class="col-sm-7">
+                      <input class="form-control" name="startup_val_l0" value=''>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="startup_val_l1" class="col-sm-3 control-label">Channel 1</label>
+                  <div class="col-sm-7">
+                      <input class="form-control" name="startup_val_l1" value=''>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="startup_val_l2" class="col-sm-3 control-label">Channel 2</label>
+                  <div class="col-sm-7">
+                      <input class="form-control" name="startup_val_l2" value=''>
+                  </div>
+              </div>
+
+              <input type="submit" value="Save and Reboot">
+            </div>
+
             <div role="tabpanel" class="tab-pane fade" id="updates">
                 <h1 class="page-header">Firmware Update</h1>
                 <div class"col-sm-8">
-                  FW: <span id="firmware_version"></span>
-                  <!--SPIFFS: <span id="spiffs_version"></span>-->
+                  FW: <span id="firmware_version"></span> APP: <span id="app_version">
+                  <script> document.write(app_version); </script></span>
                 </div>
 
                 <!-- Modal Message only showed during firmware upgrades -->
@@ -146,7 +193,7 @@
                         <h4 class="modal-title">Updating firmware to version <span class="server_version">...</span></h4>
                       </div>
                       <div class="modal-body">
-                        <div class="col-sm-1"><img src="images/hourglass.svg"/></div>
+                        <div class="col-sm-1" style="padding-right:60px; padding-top:15px"><img src="images/hourglass.svg"/></div>
                         <div>
                           <p>Please wait until this dialog
                           closes automatically, don't go back, and don't switch off your device.
@@ -200,7 +247,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/version.js"></script>
+    <script src="js/jquery.form.min.js"></script>
     <script src="js/ray.js"></script>
   </body>
 </html>

@@ -6,7 +6,7 @@ bool wifiSetup()
   int connect_tries=3;
 
   WiFi.mode(WIFI_STA);
-
+  WiFi.hostname(configData["mqtt_id"]);
   if (strcmp(configData["wifi_sta_ap"], DEFAULT_STA_AP) == 0 &&
       strcmp(configData["wifi_sta_pass"], DEFAULT_STA_PASS) == 0) {
     // if no specific ap/password is set, try first with the SDK
