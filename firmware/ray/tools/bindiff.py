@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 import binascii
 import collections
+import struct
 import sys
 
 MIN_CHUNK = 5
 MAX_CHUNK = 1024
 
-if len(sys.argv)<4:
+if len(sys.argv) < 4:
     print "usage:", sys.argv[0], "in_file1 in_file2 out_file"
     sys.exit(1)
 
@@ -54,14 +55,7 @@ def _gen_header():
     hdr += chr(1)  # version
     f1_crc32 = binascii.crc32(f1) & 0xffffffff
     f2_crc32 = binascii.crc32(f2) & 0xffffffff
-    hdr += chr(f1_crc32 >> 24)
-    hdr += chr((f1_crc32 >> 16) & 0xff)
-    hdr += chr((f1_crc32 >> 8) & 0xff)
-    hdr += chr(f1_crc32 & 0xff)
-    hdr += chr(f2_crc32 >> 24)
-    hdr += chr((f2_crc32 >> 16) & 0xff)
-    hdr += chr((f2_crc32 >> 8) & 0xff)
-    hdr += chr(f2_crc32 & 0xff)
+    hdr += struct.pack(">II", f1_crc32, f2_crc32)
     return hdr
 
 
