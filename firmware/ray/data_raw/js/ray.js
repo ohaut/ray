@@ -108,6 +108,32 @@ function start_update_check_timer() {
   current_try = 0;
 }
 
+// CH sliders /////////////////////////////////////////////////////////////////
+var slider_timer;
+var ch_0_slider = -1;
+function check_setled_updates()
+{
+    if (ch_0_slider>=0){
+        $.ajax({url:"/setLed?ch=0&val="+ch_0_slider});
+        ch_0_slider=-1;
+    }
+}
+
+function start_slider_timer() {
+    slider_timer = setInterval(check_setled_updates, 1000);
+    ch_0_slider = -1;
+}
+
+function set_ch_sliders() {
+    $("#ch0_slider").slider({ min: 0,
+                              max: 100,
+                              value: 10,
+                              slide: function( event, ui ) {
+                                  ch_0_slider = ui.value;
+                              }});
+    start_slider_timer();
+}
+
 // HTML onclick handlers //////////////////////////////////////////////////////
 function start_firmware_update() {
   $.ajax({url: "/update/all",
@@ -123,4 +149,5 @@ function start_firmware_update() {
 $(function() {
   load_config();
   check_for_updates();
+  set_ch_sliders();
 });
