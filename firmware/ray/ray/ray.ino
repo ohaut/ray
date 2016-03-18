@@ -7,7 +7,7 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
 #include <ESP8266httpUpdate.h>
-
+#include "HTTPUpdateServer.h"
 
 #include "LEDDimmers.h"
 #include "ConfigMap.h"
@@ -19,6 +19,7 @@ LEDDimmers dimmers;
 extern ConfigMap configData;
 
 ESP8266WebServer server(80);
+HTTPUpdateServer upd_server;
 
 
 
@@ -48,6 +49,9 @@ void setup(void){
 
   /* setup the HTTP API */
   setupHTTPApi(&server);
+
+  /* setup the /update-app/ server for app.html.gz updating */
+  upd_server.setup(&server);
 
   /* try to connect to the wifi, otherwise we will have an access point */
   wifi_connected = wifiSetup();
