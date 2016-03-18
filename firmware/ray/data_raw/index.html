@@ -203,12 +203,6 @@
             </div>
 
             <div role="tabpanel" class="tab-pane fade" id="updates">
-                <h1 class="page-header">Firmware Update</h1>
-                <div class="col-sm-8">
-                  FW: <span id="firmware_version"></span> APP: <span id="app_version">
-                  <script> document.write(app_version); </script></span>
-                </div>
-
                 <!-- Modal Message only showed during firmware upgrades -->
                 <div id="updateModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
                   <div class="modal-dialog">
@@ -236,8 +230,14 @@
                   </div>
                 </div>
                 <!-- Modal message END -->
-                <h2>Latest server version</h2>
                 <div class="col-sm-8">
+                <h1 class="page-header">Firmware Update</h1>
+                  FW: <span id="firmware_version"></span> APP: <span id="app_version">
+                  <script> document.write(app_version); </script></span>
+                </div>
+
+                <div class="col-sm-8">
+                <h2>Latest server version</h2>
 
                   <div id="newer_version" style="display: none" class="panel panel-primary">
                     <div class="panel-heading">
