@@ -110,27 +110,29 @@ function start_update_check_timer() {
 
 // CH sliders /////////////////////////////////////////////////////////////////
 var slider_timer;
-var ch_0_slider = -1;
+var ch_slider = [-1, -1, -1];
+var MAX_SLIDERS = 3;
 function check_setled_updates()
 {
-    if (ch_0_slider>=0){
-        $.ajax({url:"/setLed?ch=0&val="+ch_0_slider});
-        ch_0_slider=-1;
-    }
+    for (i=0; i<MAX_SLIDERS; i++)
+      if (ch_slider[i] >= 0){
+          $.ajax({url:"/setLed?ch="+ i +"&val="+ch_slider[i]});
+          ch_slider[i] = -1;
+      }
 }
 
 function start_slider_timer() {
     slider_timer = setInterval(check_setled_updates, 1000);
-    ch_0_slider = -1;
 }
 
 function set_ch_sliders() {
-    $("#ch0_slider").slider({ min: 0,
-                              max: 100,
-                              value: 10,
-                              slide: function( event, ui ) {
-                                  ch_0_slider = ui.value;
-                              }});
+    for (i = 0 ; i < MAX_SLIDERS; i++)
+      $("#ch"+i+"_slider").slider({ min: 0,
+                                    max: 100,
+                                    value: 10,
+                                    slide: function( event, ui ) {
+                                       ch_slider[i] = ui.value;
+                                   }});
     start_slider_timer();
 }
 

@@ -1,1 +1,1 @@
-var app_version="000006";
+var app_version="000007";
