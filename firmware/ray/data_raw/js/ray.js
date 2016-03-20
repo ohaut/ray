@@ -125,12 +125,12 @@ function start_slider_timer() {
     slider_timer = setInterval(check_setled_updates, 100);
 }
 
-function set_ch_sliders() {
+function set_ch_sliders(data) {
     for (i = 0 ; i < MAX_SLIDERS; i++)
       $("#ch"+i+"_slider").slider(
         { min: 0,
           max: 100,
-          value: 10,
+          value: data["ch"+i] ,
           change: (function(idx){
                     return function( event, ui ) {
                               console.log("slider "+idx);
@@ -141,6 +141,14 @@ function set_ch_sliders() {
     start_slider_timer();
 }
 
+function load_sliders() {
+    $.ajax({
+      url: "/getLeds",
+      dataType: "json",
+      jsonp: false,
+      success: set_ch_sliders
+    });
+}
 // HTML onclick handlers //////////////////////////////////////////////////////
 function start_firmware_update() {
   $.ajax({url: "/update/all",
@@ -156,5 +164,5 @@ function start_firmware_update() {
 $(function() {
   load_config();
   check_for_updates();
-  set_ch_sliders();
+  load_sliders();
 });

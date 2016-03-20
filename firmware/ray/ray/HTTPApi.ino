@@ -4,6 +4,7 @@
 
 #include "ConfigMap.h"
 #include "version.h"
+#include "LEDDimmers.h"
 
 #include "ray_global_defs.h"
 
@@ -92,7 +93,16 @@ void handleGetUpdateStatus()
   server.send(200, "application/json", result);
 }
 
-
+void handleGetLeds() {
+  char result[128];
+  sprintf(result, "{\"ch0\": \"%d\","
+                   "\"ch1\": \"%d\","
+                   "\"ch2\": \"%d\"}",
+                   (int)(dimmers.getDimmer(0)*100.0),
+                   (int)(dimmers.getDimmer(1)*100.0),
+                   (int)(dimmers.getDimmer(2)*100.0));
+  server.send(200, "application/json", result);
+}
 bool downloadAppHtmlGz(const char* url=NULL) {
 
     int len;
@@ -228,6 +238,7 @@ void handleUpdateAll() {
 
 void setupHTTPApi(ESP8266WebServer *server) {
   server->on("/setLed", HTTP_GET,  handleSetLed);
+  server->on("/getLeds", HTTP_GET, handleGetLeds);
   server->on("/update/status", HTTP_GET,  handleGetUpdateStatus);
   server->on("/update/spiffs", HTTP_GET,  handleUpdateSPIFFS);
   server->on("/update/firmware", HTTP_GET,  handleUpdateFirmware);
