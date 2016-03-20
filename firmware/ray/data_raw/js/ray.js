@@ -122,17 +122,22 @@ function check_setled_updates()
 }
 
 function start_slider_timer() {
-    slider_timer = setInterval(check_setled_updates, 1000);
+    slider_timer = setInterval(check_setled_updates, 100);
 }
 
 function set_ch_sliders() {
     for (i = 0 ; i < MAX_SLIDERS; i++)
-      $("#ch"+i+"_slider").slider({ min: 0,
-                                    max: 100,
-                                    value: 10,
-                                    slide: function( event, ui ) {
-                                       ch_slider[i] = ui.value;
-                                   }});
+      $("#ch"+i+"_slider").slider(
+        { min: 0,
+          max: 100,
+          value: 10,
+          change: (function(idx){
+                    return function( event, ui ) {
+                              console.log("slider "+idx);
+                              ch_slider[idx] = ui.value;
+                            }
+                  })(i)
+        });
     start_slider_timer();
 }
 
