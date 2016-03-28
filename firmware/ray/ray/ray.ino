@@ -73,6 +73,8 @@ void setup(void){
   });
   ArduinoOTA.begin();
 
+  SSDP_setup(&server, configData["mqtt_id"], "OHAUT Ray");
+
 #ifdef FAILSAFE_RECOVERY_MODE
   /* failsafe recovery during devel */
   for (int i=0;i<20; i++) {
