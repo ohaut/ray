@@ -2,7 +2,8 @@
 #include <WiFiClient.h>
 #include <ESP8266mDNS.h>
 #include <ArduinoOTA.h>
-#include "PubSubClient.h"
+#define MQTT_MAX_PACKET_SIZE 512
+#include <PubSubClient.h>
 #include <Ticker.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
@@ -12,6 +13,8 @@
 #include "LEDDimmers.h"
 #include "ConfigMap.h"
 #include "ray_global_defs.h"
+
+#define DEVICE_TYPE "3CHANLED"
 
 int led_pin = 13;
 
@@ -73,9 +76,11 @@ void setup(void){
   });
   ArduinoOTA.begin();
 
+
   SSDP_setup(&server, configData["mqtt_id"], "OHAUT Ray");
 
-#ifdef FAILSAFE_RECOVERY_MODE
+
+#if 1
   /* failsafe recovery during devel */
   for (int i=0;i<20; i++) {
       ArduinoOTA.handle();
@@ -86,7 +91,7 @@ void setup(void){
   if (wifi_connected)
   {
     digitalWrite(led_pin, HIGH);
-    setupMQTTHandling();
+    setupMQTTHandling(DEVICE_TYPE);
   }
 
   server.begin();

@@ -34,6 +34,14 @@ class ConfigMap {
   ConfigMap() {
     entry_list = NULL;
   }
+  ~ConfigMap() {
+      ConfigEntry *next;
+      while(entry_list) {
+          next = entry_list->next;
+          delete entry_list;
+          entry_list = next;
+      }
+  }
 
   ConfigEntry* _find(const char *key) {
     ConfigEntry* p = entry_list;
@@ -59,6 +67,20 @@ class ConfigMap {
           var_name += key;
           form.replace(var_name, (char*)value);
        });
+  }
+
+  String toJsonStr() {
+     String json = "{";
+     foreach([&json](const char* key, const char* value, bool last) {
+        json += "\"";
+        json += key;
+        json += "\": \"";
+        json += value;
+        json += "\"";
+        if (!last) json += ",\n ";
+     });
+     json += "}";
+     return json;
   }
 
   void writeTSV(const char *filename) {

@@ -37,6 +37,12 @@ void setDefaultConfig() {
   configData.set("startup_val_l1", "0");
   configData.set("startup_val_l2", "0");
 
+  // OHAUT integration
+  configData.set("oh_int", "1");
+  configData.set("oh_room", "Default");
+  configData.set("oh_section", "");
+  configData.set("oh_order", "");
+  configData.set("oh_name", esp_id);
 }
 
 void configSetup() {
@@ -168,17 +174,7 @@ float getDimmerStartupVal(int dimmer) {
 }
 
 void handleConfigGet() {
-  String json = "{";
-  configData.foreach([&json](const char* key, const char* value, bool last) {
-    json += "\"";
-    json += key;
-    json += "\": \"";
-    json += value;
-    json += "\"";
-    if (!last) json += ",\n ";
-  });
-  json += "}";
-  _server->send(200, "text/html", json);
+   _server->send(200, "text/html", configData.toJsonStr());
 }
 
 void handleConfigSave() {

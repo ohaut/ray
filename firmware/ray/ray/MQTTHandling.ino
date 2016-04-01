@@ -51,11 +51,25 @@ void sendMQTTStartupValues() {
   }
 }
 
-bool setupMQTTHandling() {
+
+bool ohaut_integration_enabled() {
+  return strcmp(configData["oh_int"], "1") == 0;
+}
+
+bool setupMQTTHandling(const char* device_type) {
   if (strlen(configData["mqtt_server"])>0) {
     mqtt.setup(configData["mqtt_server"],
                configData["mqtt_path"],
                configData["mqtt_id"]);
+
+
+    if (ohaut_integration_enabled()) {
+      mqtt.setupOhaut(device_type,
+                      configData["oh_room"],
+                      configData["oh_section"],
+                      configData["oh_name"],
+                      atoi(configData["oh_order"]));
+    }
 
     mqtt.setHandler("led1", [](byte *data, unsigned int length) {
                                 dimmer_status(0, data, length); });
@@ -64,8 +78,7 @@ bool setupMQTTHandling() {
     mqtt.setHandler("led3", [](byte *data, unsigned int length) {
                                 dimmer_status(2, data, length); });
 
-    // when the lamp goes off, we set LED1 to 0
-    mqtt.setLastWill(configData["mqtt_out_path"], "0", MQTTQOS2);
+
     mqtt_enabled = true;
     return true;
   }
