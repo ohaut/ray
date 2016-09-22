@@ -129,7 +129,8 @@ void handlePost(std::function<void()> render_form_function) {
   configData.foreach(
       [](const char* key, const char* value, bool last) {
         if (_server->hasArg(key)) {
-          const char *_str = _server->arg(key).c_str();
+          String val = _server->arg(key);
+          const char *_str = val.c_str();
           if (_str) {
             char *str = strdup(_str);
             urldecode(str);
