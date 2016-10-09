@@ -1,105 +1,63 @@
-
-#include <WiFiClient.h>
-#include <ESP8266mDNS.h>
-#include <ArduinoOTA.h>
-#define MQTT_MAX_PACKET_SIZE 512
-#include <PubSubClient.h>
 #include <Ticker.h>
-#include <ESP8266WebServer.h>
-#include <ESP8266HTTPClient.h>
-#include <ESP8266httpUpdate.h>
-#include "HTTPUpdateServer.h"
-
+#include <OHAUTlib.h>
 #include "LEDDimmers.h"
-#include "ConfigMap.h"
-#include "ray_global_defs.h"
+#include "version.h"
 
 #define DEVICE_TYPE "3CHANLED"
 
+OHAUTservice ohaut;
+LEDDimmers dimmers;
 int led_pin = 13;
 
-LEDDimmers dimmers;
-extern ConfigMap configData;
+void setDefaultConfig(ConfigMap *config) {
+  config->set("mode", "lamp");
+  config->set("startup_val_l0", "0");
+  config->set("startup_val_l1", "0");
+  config->set("startup_val_l2", "0");
+}
 
-ESP8266WebServer server(80);
-HTTPUpdateServer upd_server;
+float getDimmerStartupVal(ConfigMap *configData, int dimmer) {
+    char key[16];
+    const char *val;
+    sprintf(key, "startup_val_l%d", dimmer);
+    val = (*configData)[key];
 
+    if (val && strlen(val)) return atoi(val)/100.0;
+    else                    return 1.0;
+}
 
-
-void setupDimmers() {
+void setupDimmers(ConfigMap *configData) {
   float boot_values[3];
-  for (int i=0;i<3; i++)
-    boot_values[i] = getDimmerStartupVal(i);
+  for (int led=0;led<3; led++)
+    boot_values[led] = getDimmerStartupVal(configData, led);
   /* switch on leds */
   dimmers.setup(boot_values);
 }
 
-bool wifi_connected;
 
 void setup(void){
 
   /* start the serial port and switch on the PCB led */
   Serial.begin(115200);
-  pinMode(led_pin, OUTPUT);
-  digitalWrite(led_pin, LOW);
 
+  ohaut.set_led_pin(led_pin);
 
-  /* read the configuration, and setup the HTTP config server */
-  configServerSetup(&server);
+  ohaut.on_config_loaded = &setupDimmers;
+  ohaut.on_http_server_ready = &setupHTTPApi;
+  ohaut.on_wifi_connected = &setupMQTTHandling;
+  ohaut.on_ota_error = [](ota_error_t error) { dimmers.restart(); };
+  ohaut.on_ota_end =  [](){
+                            for (int i=0;i<30;i++){
+                            analogWrite(led_pin,(i*100) % 1001);
+                            delay(50);
+                            }
+                           };
 
-  /* setup the dimmers, now that we have the configuration */
-  setupDimmers();
-
-  /* setup the HTTP API */
-  setupHTTPApi(&server);
-
-  /* setup the /update-app/ server for app.html.gz updating */
-  upd_server.setup(&server);
-
-  /* try to connect to the wifi, otherwise we will have an access point */
-  wifi_connected = wifiSetup();
-
-  /* configure the Over The Air firmware upgrades */
-  ArduinoOTA.setHostname(configData["mqtt_id"]);
-  ArduinoOTA.onStart([]() { dimmers.halt(); });
-  ArduinoOTA.onError([](ota_error_t error) { dimmers.restart(); });
-  ArduinoOTA.onEnd([](){
-                     for (int i=0;i<30;i++){
-                        analogWrite(led_pin,(i*100) % 1001);
-                        delay(50);
-                     }
-                   });
-  ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
-    static bool toggle = true;
-    toggle = !toggle;
-    digitalWrite(led_pin, toggle);
-  });
-  ArduinoOTA.begin();
-
-
-  SSDP_setup(&server, configData["mqtt_id"], "OHAUT Ray");
-
-
-#if 1
-  /* failsafe recovery during devel */
-  for (int i=0;i<20; i++) {
-      ArduinoOTA.handle();
-      delay(100);
-  }
-#endif
-
-  if (wifi_connected)
-  {
-    digitalWrite(led_pin, HIGH);
-    setupMQTTHandling(DEVICE_TYPE);
-  }
-
-  server.begin();
+  ohaut.setup(DEVICE_TYPE, VERSION, "OHAUT ray");
  }
 
 void loop(void){
-  ArduinoOTA.handle();
-  server.handleClient();
-  if (wifi_connected)
+  ohaut.handle();
+  if (ohaut.is_wifi_connected())
      MQTTHandle();
 }

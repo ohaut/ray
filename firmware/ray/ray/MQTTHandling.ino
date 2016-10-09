@@ -1,4 +1,4 @@
-#include "MQTTDevice.h"
+#include <OHAUTlib.h>
 
 MQTTDevice mqtt;
 bool mqtt_enabled = false;
@@ -55,22 +55,25 @@ void sendMQTTStartupValues() {
 bool ohaut_integration_enabled() {
   return strcmp(configData["oh_int"], "1") == 0;
 }
+extern OHAUTservice ohaut;
 
-bool setupMQTTHandling(const char* device_type) {
+void setupMQTTHandling() {
+
   if (strlen(configData["mqtt_server"])>0) {
+    // TODO(mangelajo): Move this to OHAUTlib ///////////
     mqtt.setup(configData["mqtt_server"],
                configData["mqtt_path"],
                configData["mqtt_id"]);
 
 
     if (ohaut_integration_enabled()) {
-      mqtt.setupOhaut(device_type,
+      mqtt.setupOhaut(ohaut.get_device_type(),
                       configData["oh_room"],
                       configData["oh_section"],
                       configData["oh_name"],
                       atoi(configData["oh_order"]));
     }
-
+    /////////////////////////////////////////////////////
     mqtt.setHandler("led1", [](byte *data, unsigned int length) {
                                 dimmer_status(0, data, length); });
     mqtt.setHandler("led2", [](byte *data, unsigned int length) {
@@ -78,13 +81,9 @@ bool setupMQTTHandling(const char* device_type) {
     mqtt.setHandler("led3", [](byte *data, unsigned int length) {
                                 dimmer_status(2, data, length); });
 
-
     mqtt_enabled = true;
-    return true;
   }
   mqtt_enabled = false;
-  return false;
-
 }
 
 void MQTTHandle() {

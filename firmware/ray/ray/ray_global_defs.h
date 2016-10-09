@@ -7,17 +7,9 @@
 #ifndef __ray_global_defs_h
 #define __ray_global_defs_h
 
-float getDimmerStartupVal(int dimmer);
-void configServerSetup(ESP8266WebServer *server);
 void setupHTTPApi(ESP8266WebServer *server);
-bool wifiSetup();
-bool setupMQTTHandling();
+void setupMQTTHandling();
 void MQTTHandle();
 void setDimmerAndPublish(int channel, int value);
-void setDefaultConfig();
-void setupDefaultConfigLamp();
-void handleConfigLamp();
-void handleConfigLampPost();
-bool handleFileRead(ESP8266WebServer *server, String path);
 
 #endif
