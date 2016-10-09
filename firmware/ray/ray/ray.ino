@@ -53,7 +53,7 @@ void setup(void){
                             }
                            };
 
-  ohaut.setup(DEVICE_TYPE, VERSION, "OHAUT ray");
+  ohaut.setup(DEVICE_TYPE, VERSION, "ray");
  }
 
 void loop(void){
