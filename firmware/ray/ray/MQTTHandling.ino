@@ -82,8 +82,9 @@ void setupMQTTHandling() {
                                 dimmer_status(2, data, length); });
 
     mqtt_enabled = true;
+  } else {
+    mqtt_enabled = false;
   }
-  mqtt_enabled = false;
 }
 
 void MQTTHandle() {
