@@ -12,7 +12,10 @@ mkdir data
 rm -rf data_raw
 mkdir data_raw
 echo rendering app, version $APP_VERSION
-ohaut-render-html webapp/ray.html data_raw --set app_version=$APP_VERSION
+ohaut-render-html webapp/ray.html data_raw \
+        --set app_version=$APP_VERSION \
+        --project_name Ray
+
 cp -rf webapp/js/ray.js data_raw/js/
 
 # go to the source directory
