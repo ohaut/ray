@@ -44,8 +44,7 @@ function load_sliders() {
 // MAIN ///////////////////////////////////////////////////////////////////////
 
 $(function() {
-  ohaut_project = 'ray';
   load_config();
-  check_for_updates();
+  check_for_updates('ray');
   load_sliders();
 });
