@@ -12,7 +12,7 @@ void setDimmerAndPublish(int channel, int value) {
 
       sprintf(pub_name, "led%d", channel+1);
       sprintf(pub_data, "%d", value);
-      ohaut.mqtt->publish(pub_name, pub_data);
+      ohaut.mqtt->publish(pub_name, pub_data, true /*with state*/);
     }
 }
 
