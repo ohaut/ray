@@ -30,10 +30,10 @@ void handleSetLed() {
     }
 
     if (strlen(str_ch))
-      setDimmerAndPublish(ch, val);
+       dimmers.setDimmer(ch, ((float)val)/100.0);
     else {
       for (ch=0; ch<N_DIMMERS; ch++)
-        setDimmerAndPublish(ch, val);
+        dimmers.setDimmer(ch, ((float)val)/100.0);
     }
     web_server->send(200, "application/json", "{\"result\": \"0\", \"message:\": "
                                           "\"channel set correctly\"}");

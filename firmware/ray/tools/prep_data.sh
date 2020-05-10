@@ -14,7 +14,10 @@ mkdir data_raw
 echo rendering app, version $APP_VERSION
 ohaut-render-html webapp/ray.html data_raw \
         --set app_version=$APP_VERSION \
+        --template webapp_template \
         --project_name Ray
+
+cp -rfp webapp_template/* data_raw
 
 cp -rf webapp/js/ray.js data_raw/js/
 
