@@ -57,7 +57,7 @@ rm /tmp/app.html.[12]
 
 
 
-cp -f .pioenvs/esp12e/firmware.bin ../master/firmware-$VERSION.bin
+cp -f .pio/build/esp12e/firmware.bin ../master/firmware-$VERSION.bin
 cp -f data/app.html.gz ../master/app.html-$APP_VERSION.gz
 rm -f ../master/firmware.bin
 rm -f ../master/app.html.gz
