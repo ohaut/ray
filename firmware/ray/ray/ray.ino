@@ -2,8 +2,7 @@
 #include <OHAUTlib.h>
 #include "LEDDimmers.h"
 #include "version.h"
-#include <ESPAsyncTCP.h>
-#include <Hash.h>
+
 
 #define DEVICE_TYPE "3CHANLED"
 
@@ -18,8 +17,8 @@ char lamp_nameall[128];
 float boot_values[3];
 
 void setup(void){
-           
-  
+
+
    /* start the serial port and switch on the PCB led */
     Serial.begin(115200);
 
@@ -51,10 +50,12 @@ void setup(void){
     };
 
     ohaut.on_ota_end =  [](){
+       #ifdef ESP8266
         for (int i=0;i<30;i++){
             analogWrite(led_pin,(i*100) % 1001);
             delay(50);
         }
+       #endif
     };
 
     ohaut.setup(DEVICE_TYPE, VERSION, "ray");

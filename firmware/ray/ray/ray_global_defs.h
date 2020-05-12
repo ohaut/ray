@@ -7,9 +7,6 @@
 #ifndef __ray_global_defs_h
 #define __ray_global_defs_h
 
-void setupHTTPApi(ESP8266WebServer *server);
-void setupMQTTHandling();
-void MQTTHandle();
-void setDimmerAndPublish(int channel, int value);
+void setupHTTPApi(WebServer *server);
 
 #endif
