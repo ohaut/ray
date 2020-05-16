@@ -5,6 +5,7 @@
 
 {% block tabs %}
    <li class="active"><a data-toggle="tab" href="#lamp" aria-controls="lamp">Lamp</a></li>
+   <li><a data-toggle="tab" href="#lamp-publishing" aria-controls="lamp-publishing">Lamp publishing</a></li>
 {% endblock %}
 
 {% block tab_panes %}
@@ -12,56 +13,88 @@
 
       <h1>Current lamp values</h1>
 
-      <div class="form-group">
-          <label class="col-sm-3 control-label">CH0</label>
-          <div class="col-sm-7">
-              <div id="ch0_slider"></div>
-          </div>
-      </div>
+        <div class="form-group"> <label class="col-sm-3 control-label">CH0</label><div class="col-sm-7">
+                <div id="ch0_slider"></div>
+        </div></div>
 
-      <div class="form-group">
-          <label class="col-sm-3 control-label">CH1</label>
-          <div class="col-sm-7">
-              <div id="ch1_slider"></div>
-          </div>
-      </div>
+        <div class="form-group"><label class="col-sm-3 control-label">CH1</label><div class="col-sm-7">
+                <div id="ch1_slider"></div>
+        </div></div>
 
-      <div class="form-group">
-          <label class="col-sm-3 control-label">CH2</label>
-          <div class="col-sm-7">
-              <div id="ch2_slider"></div>
-          </div>
-      </div>
+        <div class="form-group"><label class="col-sm-3 control-label">CH2</label><div class="col-sm-7">
+                <div id="ch2_slider"></div>
+        </div></div>
+
+        <div class="form-group"><label class="col-sm-3 control-label">ALL</label><div class="col-sm-7">
+                <div id="all_slider"></div>
+        </div></div>
+    
 
       <h1>Lamp startup settings (0-100 or empty to get it from net)</h1>
 
-      <div class="form-group">
-          <label for="startup_val_l0" class="col-sm-3 control-label">Channel 0</label>
-          <div class="col-sm-7">
-              <input class="form-control" name="startup_val_l0" value=''>
-          </div>
-      </div>
+        <div class="form-group"><label for="startup_val_l0" class="col-sm-3 control-label">Channel 0</label><div class="col-sm-7">
+                <input class="form-control" name="startup_val_l0" value=''>
+        </div></div>
 
-      <div class="form-group">
-          <label for="startup_val_l1" class="col-sm-3 control-label">Channel 1</label>
-          <div class="col-sm-7">
-              <input class="form-control" name="startup_val_l1" value=''>
-          </div>
-      </div>
+        <div class="form-group"><label for="startup_val_l1" class="col-sm-3 control-label">Channel 1</label><div class="col-sm-7">
+                <input class="form-control" name="startup_val_l1" value=''>
+        </div></div>
 
-      <div class="form-group">
-          <label for="startup_val_l2" class="col-sm-3 control-label">Channel 2</label>
-          <div class="col-sm-7">
-              <input class="form-control" name="startup_val_l2" value=''>
-          </div>
-      </div>
+        <div class="form-group"><label for="startup_val_l2" class="col-sm-3 control-label">Channel 2</label><div class="col-sm-7">
+                <input class="form-control" name="startup_val_l2" value=''>
+        </div></div>
 
-      <div class="col-sm-7">
-        <br/>
-      </div>
+      <h1>Lamp "all" mode</h1>
+        <div class="form-group">
+            <label for="all_mode" class="col-sm-3 control-label">mode</label>
+                <div class="col-sm-7">
+                    <select class="form-control" name="all_mode" id="all_mode" aria-describedby="all_mode_help">
+                        <option value="0">Proportional</option>
+                        <option value="1">Max out</option>
+                    </select>
+                    <small id="all_mode_help" class="form-text text-muted">
+                        The lamp all slider controls the 0..2 channels from a single point. This options controls how
+                        100% on lamp "all" works. <b>Proportional</b> will maintain the proportion of channels configured
+                        on the startup settings, while <b>Max out</b> will ensure light is maximized at 100%. 
+                    </small>
+                </div>
+        </div>
 
-      <input type="submit" value="Save and Reboot">
+
+
+      <div class="col-sm-7"><br/></div>
+
+      <button type="submit" class="btn btn-primary">Save and Reboot</button>
     </div>
+
+     <div role="tabpanel" class="tab-pane fade in" id="lamp-publishing">
+
+      <h1>Lamp Publishing</h1>
+        <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="pub_l0_bool" name="pub_l0_bool" value="true">
+             <label for="pub_l0_bool" class="form-check-label">Publish individual L0 channel</label>
+        </div>
+
+        <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="pub_l1_bool" name="pub_l1_bool" value="true">
+             <label for="pub_l1_bool" class="form-check-label">Publish individual L1 channel</label>
+        </div>
+
+        <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="pub_l2_bool" name="pub_l2_bool" value="true">
+             <label for="pub_l2_bool" class="form-check-label">Publish individual L2 channel</label>
+        </div>
+
+        <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="pub_all_bool" name="pub_all_bool" value="true">
+             <label for="pub_all_bool" class="form-check-label">Publish aggregated ALL channel</label>
+        </div>
+
+      <div class="col-sm-7"><br/></div>
+
+      <button type="submit" class="btn btn-primary">Save and Reboot</button>
+    </div>
+
 {% endblock %}
 
 {% block javascript_imports %}

@@ -56,7 +56,6 @@
               <li class="active"><a data-toggle="tab" href="#lamp" aria-controls="lamp">Lamp</a></li>
             {% endblock %}
             <li><a data-toggle="tab" href="#wifi">WiFi</a></li>
-            <li><a data-toggle="tab" href="#discovery" aria-controls="discovery">Discovery</a></li>
             <li><a data-toggle="tab" href="#updates" aria-controls="updates">Updates</a></li>
           </ul>
         </div>
@@ -136,13 +135,20 @@
                 <br/>
               </div>
 
-              <input type="submit" value="Save and Reboot">
+              <button type="submit" class="btn btn-primary">Save and Reboot</button>
             </div>
             {% endblock %}
 
             <div role="tabpanel" class="tab-pane fade" id="wifi">
 
                 <h1 class="page-header">WiFi settings</h1>
+                <h3>Discovery hostname</h3>
+                <div class="form-group">
+                    <label for="oh_name" class="col-sm-3 control-label">Device name</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" name="host_id" value=''>
+                    </div>
+                </div>
                 <h3>WiFi Station settings</h3>
                 <div class="form-group">
                     <label for="wifi_sta_ap" class="col-sm-3 control-label">WiFi SSID</label>
@@ -160,6 +166,13 @@
 
                 <h3>WiFi AP (fallback config)</h3>
                 <div class="form-group">
+                 <div class="col-sm-7">
+                    If the device can't connect to the access point described in the Wifi Station settings
+                    section it will configure itself as an access point with the following settings, and
+                    become available in address http://192.168.4.1:8080/
+                  </div>
+                </div>
+                <div class="form-group">
                     <label for="wifi_ap_ssid" class="col-sm-3 control-label">WiFi AP SSID</label>
                     <div class="col-sm-7">
                       <input class="form-control" name="wifi_ap_ssid" value=''>
@@ -173,20 +186,7 @@
                     </div>
                 </div>
 
-                <input type="submit" value="Save and Reboot">
-            </div>
-
-            <div role="tabpanel" class="tab-pane fade" id="discovery">
-                <h1 class="page-header">Discovery details</h1>
-
-                <div class="form-group">
-                    <label for="oh_name" class="col-sm-3 control-label">Device name</label>
-                    <div class="col-sm-7">
-                        <input class="form-control" name="host_id" value=''>
-                    </div>
-                </div>
-
-                <input type="submit" value="Save">
+                <button type="submit" class="btn btn-primary">Save and Reboot</button>
             </div>
 
             <div role="tabpanel" class="tab-pane fade" id="updates">

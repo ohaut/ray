@@ -29,14 +29,16 @@ void handleSetLed() {
       goto _exit;
     }
 
-    if (strlen(str_ch))
+    /* if a channel was provided we will use the channel, otherwise all */
+    if (strlen(str_ch)) {
        dimmers.setDimmer(ch, ((float)val)/100.0);
-    else {
-      for (ch=0; ch<N_DIMMERS; ch++)
-        dimmers.setDimmer(ch, ((float)val)/100.0);
     }
-    web_server->send(200, "application/json", "{\"result\": \"0\", \"message:\": "
-                                          "\"channel set correctly\"}");
+    else {
+       dimmers.setAll(((float)val)/100.0);
+    }
+   // web_server->send(200, "application/json", "{\"result\": \"0\", \"message:\": "
+   //                                       "\"channel set correctly\"}");
+   handleGetLeds();
  _exit:
     free (str_ch);
     free (str_val);
@@ -46,10 +48,12 @@ void handleGetLeds() {
   char result[128];
   sprintf(result, "{\"ch0\": \"%d\","
                    "\"ch1\": \"%d\","
-                   "\"ch2\": \"%d\"}",
+                   "\"ch2\": \"%d\","
+                   "\"all\": \"%d\"}",
                    (int)(dimmers.getDimmer(0)*100.0),
                    (int)(dimmers.getDimmer(1)*100.0),
-                   (int)(dimmers.getDimmer(2)*100.0));
+                   (int)(dimmers.getDimmer(2)*100.0),
+                   (int)(dimmers.getAll()*100.0));
   web_server->send(200, "application/json", result);
 }
 

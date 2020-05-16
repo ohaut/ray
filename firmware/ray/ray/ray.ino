@@ -15,9 +15,9 @@ char lamp_name2[128];
 char lamp_name3[128];
 char lamp_nameall[128];
 float boot_values[3];
+float proportional_values[3];
 
 void setup(void){
-
 
    /* start the serial port and switch on the PCB led */
     Serial.begin(115200);
@@ -26,9 +26,18 @@ void setup(void){
 
     ohaut.on_config_defaults = [](ConfigMap *config) {
         config->set("mode", "lamp");
+
         config->set("startup_val_l0", "0");
         config->set("startup_val_l1", "0");
         config->set("startup_val_l2", "0");
+
+        config->set("pub_l0_bool", "false");
+        config->set("pub_l1_bool", "false");
+        config->set("pub_l2_bool", "false");
+        config->set("pub_all_bool", "true");
+
+        config->set("all_mode", "0"); /* default mode proportional */
+
     };
 
     ohaut.on_config_loaded = [](ConfigMap *configData) {
@@ -36,7 +45,18 @@ void setup(void){
             boot_values[led] = getDimmerStartupVal(configData, led);
 
          /* switch on leds */
-         dimmers.setup(boot_values);
+         dimmers.setup(boot_values, atoi((*configData)["all_mode"]));
+
+        // Add virtual devices
+        sprintf(lamp_name1, "%s_l0", ohaut.get_host_id());
+        sprintf(lamp_name2, "%s_l1", ohaut.get_host_id());
+        sprintf(lamp_name3, "%s_l2", ohaut.get_host_id());
+        sprintf(lamp_nameall, "%s_all", ohaut.get_host_id());
+
+        if (configData->isTrue("pub_l0_bool")) ohaut.fauxmo->addDevice(lamp_name1);
+        if (configData->isTrue("pub_l1_bool")) ohaut.fauxmo->addDevice(lamp_name2);
+        if (configData->isTrue("pub_l2_bool")) ohaut.fauxmo->addDevice(lamp_name3);
+        if (configData->isTrue("pub_all_bool")) ohaut.fauxmo->addDevice(lamp_nameall);
     };
 
     ohaut.on_http_server_ready = &setupHTTPApi;
@@ -60,20 +80,8 @@ void setup(void){
 
     ohaut.setup(DEVICE_TYPE, VERSION, "ray");
 
-    // Add virtual devices
-    sprintf(lamp_name1, "%s_l1", ohaut.get_host_id());
-    sprintf(lamp_name2, "%s_l2", ohaut.get_host_id());
-    sprintf(lamp_name3, "%s_l3", ohaut.get_host_id());
-    sprintf(lamp_nameall, "%s_all", ohaut.get_host_id());
-
-    ohaut.fauxmo->addDevice(lamp_name1);
-    ohaut.fauxmo->addDevice(lamp_name2);
-    ohaut.fauxmo->addDevice(lamp_name3);
-    ohaut.fauxmo->addDevice(lamp_nameall);
-
     ohaut.fauxmo->onSetState([](unsigned char device_id, const char * device_name, bool state, unsigned char value) {
 
-      
         Serial.printf("[MAIN] Device #%d (%s) state: %s value: %d\r\n", device_id, device_name, state ? "ON" : "OFF", value);
 
         // Checking for device_id is simpler if you are certain about the order they are loaded and it does not change.
@@ -92,11 +100,8 @@ void setup(void){
         } else if (strcmp(device_name, lamp_name3)==0) {
             dimmers.setDimmer(2, valf);
         } else if (strcmp(device_name, lamp_nameall)==0) {
-
-            float boot_values[3];
-            for (int led=0;led<3; led++)
-                dimmers.setDimmer(led, valf * boot_values[led]);
-        } 
+            dimmers.setAll(valf);
+        }
     });
 }
 
@@ -105,7 +110,6 @@ void loop(void){
     if (ohaut.is_wifi_connected()) {
 
     }
-       
 }
 
 float getDimmerStartupVal(ConfigMap *configData, int dimmer) {

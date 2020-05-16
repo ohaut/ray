@@ -6,7 +6,13 @@ function load_config()
     jsonp: false,
     success: function( data ) {
         for (var key in data) {
-          $('#main').find('input[name="'+key+'"]').val(data[key]);
+          console.log("Setting " + key + " = " + data[key]);
+          if (key.endsWith("_bool")) {
+            $('#main').find('input[name="'+key+'"]').prop('checked', data[key] == 'true');
+          } else {
+            $('#main').find('input[name="'+key+'"]').val(data[key]);
+            $('#main').find('select[name="'+key+'"]').val(data[key]);
+          }
         }
         $("#startupModal").modal("hide");
         $("#startupModal").css("display", "none");

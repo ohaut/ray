@@ -26,19 +26,20 @@ void ticker_update(LEDDimmers *cls) {
   cls->update();
 }
 
-void LEDDimmers::setup(float* boot_values) {
+void LEDDimmers::setup(float* boot_values, int all_mode) {
 
 #if defined(ESP8266)
   analogWriteRange(ANALOG_RANGE);
 #endif
+  float _min = 1.0;
+  float _max = 0.0;
 
   for (int i=0; i<N_DIMMERS; i++) {
-    #ifdef ESP32
-    ledcSetup(i, PWM_FREQ, PWM_RESOLUTION);
-    ledcAttachPin(DIMMER_PIN[i], i);
-    #endif
 
     float boot_value = boot_values?boot_values[i]:1.0;
+    if (boot_value > _max) _max = boot_value;
+    if (boot_value > 0.0 && boot_value < _min) _min = boot_value;
+
     float analog_val = pow(boot_value,
                            _gamma)*float(ANALOG_RANGE);
 
@@ -46,11 +47,29 @@ void LEDDimmers::setup(float* boot_values) {
     pinMode(DIMMER_PIN[i], OUTPUT);
     analogWrite(DIMMER_PIN[i], analog_val);
     #elif defined(ESP32)
+    ledcSetup(i, PWM_FREQ, PWM_RESOLUTION);
+    ledcAttachPin(DIMMER_PIN[i], i);
     ledcWrite(i, analog_val);
     #endif
+
    _dimmers[i] = boot_value;
    _dimmers_val[i] = boot_value;
   }
+
+  /* Calculate the proportional values for the "all" channel based on the mode */
+  float proportion;
+  if (all_mode == ALL_MODE_PROPORTIONAL) {
+      proportion = 1.0 / _max;
+      _all = _max;
+  } else {
+      proportion = 1.0 / _min;
+      _all = _min;
+  }
+
+  for (int i=0; i<N_DIMMERS; i++) {
+    _all_prop[i] = _dimmers[i] * proportion;
+  }
+
   update_ticker.attach(DIMMER_PERIOD, ticker_update, this);
 }
 
@@ -76,12 +95,15 @@ void LEDDimmers::setGamma(float gamma) {
   _gamma = gamma;
 }
 
+const float min_step = 1.0/float(ANALOG_RANGE);
+
 void LEDDimmers::update() {
 
   for (int n=0; n<N_DIMMERS; n++) {
     float step = (_dimmers[n]-_dimmers_val[n])*DIMMER_STEP;
      if (_dimmers_val[n]!=_dimmers[n]) {
-        if (fabs(_dimmers_val[n] - _dimmers[n])<=step)
+        float fdiff = fabs(_dimmers_val[n] - _dimmers[n]);
+        if (fdiff<=min_step)
           _dimmers_val[n] = _dimmers[n];
         else
           _dimmers_val[n] += step;
@@ -89,7 +111,8 @@ void LEDDimmers::update() {
         analogWrite(DIMMER_PIN[n],
                     pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE));
         #elif defined(ESP32)
-        ledcWrite(n, pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE));
+        int val = pow(_dimmers_val[n], _gamma)*float(ANALOG_RANGE);
+        ledcWrite(n, val);
         #endif
      }
   }
@@ -111,4 +134,15 @@ float LEDDimmers::getDimmer(int n) {
     return _dimmers[n];
 
   return -1;
+}
+
+void LEDDimmers::setAll(float value) {
+  _all = value;
+  for (int i=0; i<N_DIMMERS; i++) {
+    setDimmer(i, _all_prop[i] * value);
+  }
+}
+
+float LEDDimmers::getAll() {
+  return _all;
 }
