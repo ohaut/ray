@@ -8,14 +8,13 @@ const int ANALOG_RANGE=1000;
 
 int DIMMER_PIN[] = {14, 5, 15};
 
-
 #elif defined(ESP32)
 
-int DIMMER_PIN[] = {LED_BUILTIN, 12, 14};
+int DIMMER_PIN[] = {8, 10, 7};
 
-#define PWM_FREQ 5000
-#define PWM_RESOLUTION 13
-const int ANALOG_RANGE = 8191;
+#define PWM_FREQ 20000
+#define PWM_RESOLUTION 10
+const int ANALOG_RANGE = (1 << PWM_RESOLUTION) - 1;
 
 #endif
 
@@ -47,6 +46,9 @@ void LEDDimmers::setup(float* boot_values, int all_mode) {
     pinMode(DIMMER_PIN[i], OUTPUT);
     analogWrite(DIMMER_PIN[i], analog_val);
     #elif defined(ESP32)
+    // use a 10mA drive strength for the dimmer pins
+    gpio_set_drive_capability((gpio_num_t)DIMMER_PIN[i], GPIO_DRIVE_CAP_0);
+
     ledcSetup(i, PWM_FREQ, PWM_RESOLUTION);
     ledcAttachPin(DIMMER_PIN[i], i);
     ledcWrite(i, analog_val);
@@ -65,11 +67,24 @@ void LEDDimmers::setup(float* boot_values, int all_mode) {
       proportion = 1.0 / _min;
       _all = _min;
   }
+  bool all_0 = true;
 
+  // if all dimmers are set to 0 on boot, the proportional calculation won't work
+  // TODO: we need a better way of handling this, i.e. having a "switched off" flag.
   for (int i=0; i<N_DIMMERS; i++) {
-    _all_prop[i] = _dimmers[i] * proportion;
+    if (_dimmers[i] > 0.0) {
+      all_0 = false;
+      break;
+    }
   }
-
+  
+  for (int i=0; i<N_DIMMERS; i++) {
+    if (all_0) {
+      _all_prop[i] = 1.0;
+    } else {
+      _all_prop[i] = _dimmers[i] * proportion;
+    }
+  }
   update_ticker.attach(DIMMER_PERIOD, ticker_update, this);
 }
 

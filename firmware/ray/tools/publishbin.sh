@@ -13,7 +13,7 @@ fi
 
 git push
 
-platformio run -e esp32
+platformio run -e esp32c3
 platformio run -e esp12e
 
 ./tools/prep_data.sh
@@ -60,12 +60,12 @@ rm /tmp/app.html.[12]
 
 
 cp -f .pio/build/esp12e/firmware.bin ../master/firmware-$VERSION.bin
-cp -f .pio/build/esp32/firmware.bin ../master/firmware_esp32-$VERSION.bin
+cp -f .pio/build/esp32c3/firmware.bin ../master/firmware_esp32c3-$VERSION.bin
 cp -f data/app.html.gz ../master/app.html-$APP_VERSION.gz
 rm -f ../master/firmware.bin
 rm -f ../master/app.html.gz
 ln -s ../master/firmware-$VERSION.bin ../master/firmware.bin
-ln -s ../master/firmware_esp32-$VERSION.bin ../master/firmware_esp32.bin
+ln -s ../master/firmware_esp32c3-$VERSION.bin ../master/firmware_esp32c3.bin
 ln -s ../master/app.html-$APP_VERSION.gz ../master/app.html.gz
 echo $VERSION,firmware-$VERSION.bin,$APP_VERSION,app.html-$APP_VERSION.gz,$COMMIT_ID \
     >> ../master/firmware.csv

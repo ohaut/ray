@@ -3,7 +3,7 @@ set -x
 
 #requisites: npm install -g inliner
 
-APP_VERSION=$(python -c "print open('webapp/version', 'rb').readlines()[0]")
+APP_VERSION=$(head -n 1 webapp/version)
 
 # cleanup the output data directory
 rm -rf data

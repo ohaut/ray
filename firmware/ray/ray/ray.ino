@@ -8,7 +8,12 @@
 
 OHAUTservice ohaut;
 LEDDimmers dimmers;
+
+#if defined(ESP8266)
 int led_pin = 13;
+#elif defined(ESP32)
+int led_pin = NO_LED_PIN;
+#endif
 
 char lamp_name1[128];
 char lamp_name2[128];
@@ -107,9 +112,7 @@ void setup(void){
 
 void loop(void){
     ohaut.handle();
-    if (ohaut.is_wifi_connected()) {
-
-    }
+    delay(50);
 }
 
 float getDimmerStartupVal(ConfigMap *configData, int dimmer) {
