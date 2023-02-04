@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 set -x
-VERSION=$(python -c "print open('ray/version.h', 'rb').read().split('\"')[1]")
-APP_VERSION=$(python -c "print open('webapp/version', 'rb').readlines()[0]")
+VERSION=$(python3 -c "print(str(open('ray/version.h', 'rb').read()).split('\"')[1])")
+APP_VERSION=$(head -n 1 webapp/version)
 COMMIT_ID=$(git rev-parse --short HEAD)
 
 
@@ -69,6 +69,8 @@ ln -s ../master/firmware_esp32c3-$VERSION.bin ../master/firmware_esp32c3.bin
 ln -s ../master/app.html-$APP_VERSION.gz ../master/app.html.gz
 echo $VERSION,firmware-$VERSION.bin,$APP_VERSION,app.html-$APP_VERSION.gz,$COMMIT_ID \
     >> ../master/firmware.csv
+echo $VERSION,firmware-esp32c3-$VERSION.bin,$APP_VERSION,app.html-$APP_VERSION.gz,$COMMIT_ID \
+    >> ../master/firmware_esp32c3.csv
 
 git add ../master/firmware*
 git add ../master/app*
