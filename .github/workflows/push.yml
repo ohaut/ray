@@ -28,4 +28,4 @@ jobs:
       - name: Build firmware (esp32c3)
         run: |
           cd firmware
-          pio run -e esp12e
+          pio run -e esp32c3
