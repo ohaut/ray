@@ -30,7 +30,7 @@
         </div></div>
     
 
-      <h1>Lamp startup settings (0-100 or empty to get it from net)</h1>
+      <h1>Lamp startup settings (0-100)</h1>
 
         <div class="form-group"><label for="startup_val_l0" class="col-sm-3 control-label">Channel 0</label><div class="col-sm-7">
                 <input class="form-control" name="startup_val_l0" value=''>
@@ -44,7 +44,29 @@
                 <input class="form-control" name="startup_val_l2" value=''>
         </div></div>
 
-      <h1>Lamp "all" mode</h1>
+        <h1>Lamp startup</h1>
+        <div class="form-group">
+            <label for="startup_mode" class="col-sm-3 control-label">mode</label>
+                <div class="col-sm-7">
+                    <select class="form-control" name="startup_mode" id="startup_mode" aria-describedby="startup_mode_help">
+                        <option value="0">OFF</option>
+                        <option value="1">ON</option>
+                        <option value="2">Use P Switch input</option>
+                        <option value="3">OFF (P is a push button)</option>
+                        <option value="4">ON (P is a push button)</option>
+                    </select>
+                    <small id="startup_mode_help" class="form-text text-muted">
+                        The lamp startup mode controls what happens when the lamp is powered on. <b>OFF</b> will
+                        turn the lamp off, <b>ON</b> will turn the lamp on, and <b>Use P Switch input</b> will
+                        use the P input to determine the lamp state. <b>OFF (P is a push button)</b> and
+                        <b>ON (P is a push button)</b> will start OFF or ON, but will toggle the lamp state
+                        when the P input is pressed.
+                    </small>
+                </div>
+        </div>
+
+
+        <h1>Lamp "all" mode</h1>
         <div class="form-group">
             <label for="all_mode" class="col-sm-3 control-label">mode</label>
                 <div class="col-sm-7">
