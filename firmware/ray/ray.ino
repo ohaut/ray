@@ -22,6 +22,16 @@ char lamp_nameall[128];
 float boot_values[3];
 float proportional_values[3];
 
+typedef enum {
+    STARTUP_OFF = 0,
+    STARTUP_ON,
+    STARTUP_P_SWITCH,
+    STARTUP_ON_PB,
+    STARTUP_OFF_PB,
+} startup_mode_t;
+
+startup_mode_t startup_mode = STARTUP_OFF;
+
 void setup(void){
 
    /* start the serial port and switch on the PCB led */
@@ -32,7 +42,7 @@ void setup(void){
     ohaut.on_config_defaults = [](ConfigMap *config) {
         config->set("mode", "lamp");
 
-        config->set("startup_val_l0", "0");
+        config->set("startup_val_l0", "100");
         config->set("startup_val_l1", "0");
         config->set("startup_val_l2", "0");
 
@@ -40,6 +50,7 @@ void setup(void){
         config->set("pub_l1_bool", "false");
         config->set("pub_l2_bool", "false");
         config->set("pub_all_bool", "true");
+        config->set("startup_mode", "1");
 
         config->set("all_mode", "0"); /* default mode proportional */
 
@@ -49,8 +60,8 @@ void setup(void){
         for (int led=0;led<3; led++)
             boot_values[led] = getDimmerStartupVal(configData, led);
 
-         /* switch on leds */
-         dimmers.setup(boot_values, atoi((*configData)["all_mode"]));
+        /* switch on leds */
+        dimmers.setup(boot_values, atoi((*configData)["all_mode"]));
 
         // Add virtual devices
         sprintf(lamp_name1, "%s_l0", ohaut.get_host_id());
@@ -62,6 +73,8 @@ void setup(void){
         if (configData->isTrue("pub_l1_bool")) ohaut.fauxmo->addDevice(lamp_name2);
         if (configData->isTrue("pub_l2_bool")) ohaut.fauxmo->addDevice(lamp_name3);
         if (configData->isTrue("pub_all_bool")) ohaut.fauxmo->addDevice(lamp_nameall);
+
+        startup_mode = getStartupMode(configData);
     };
 
     ohaut.on_http_server_ready = &setupHTTPApi;
@@ -123,4 +136,10 @@ float getDimmerStartupVal(ConfigMap *configData, int dimmer) {
 
     if (val && strlen(val)) return atoi(val)/100.0;
     else                    return 1.0;
+}
+
+startup_mode_t getStartupMode(ConfigMap *configData) {
+    const char *val = (*configData)["startup_mode"];
+    if (val && strlen(val)) return (startup_mode_t)atoi(val);
+    else                    return STARTUP_OFF;
 }
