@@ -63,6 +63,7 @@ cp -f .pio/build/esp12e/firmware.bin ../master/firmware-$VERSION.bin
 cp -f .pio/build/esp32c3/firmware.bin ../master/firmware_esp32c3-$VERSION.bin
 cp -f data/app.html.gz ../master/app.html-$APP_VERSION.gz
 rm -f ../master/firmware.bin
+rm -f ../master/firmware_esp32c3.bin
 rm -f ../master/app.html.gz
 ln -s ../master/firmware-$VERSION.bin ../master/firmware.bin
 ln -s ../master/firmware_esp32c3-$VERSION.bin ../master/firmware_esp32c3.bin
